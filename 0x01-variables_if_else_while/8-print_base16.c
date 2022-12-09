@@ -23,7 +23,7 @@ int main(void)
 			lowercase++;
 		}
 		counter++;
-	}
+	}	
 	putchar('\n');
 
 	return (0);
