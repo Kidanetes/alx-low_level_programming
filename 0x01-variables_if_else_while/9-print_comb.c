@@ -16,7 +16,6 @@ int main(void)
 			putchar('0' + counter);
 			counter++;
 			continue;
-			
 		}
 		putchar('0' + counter);
 	        putchar(',');
