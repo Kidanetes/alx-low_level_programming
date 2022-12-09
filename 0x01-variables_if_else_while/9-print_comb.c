@@ -1,6 +1,5 @@
 #include <stdio.h>
 /**
- *
  * main - Entry point
  *
  * Return:Always 0 (Success)
@@ -11,17 +10,17 @@ int main(void)
 
 	while (counter < 10)
 	{
+		putchar('0' + counter);
 		if (counter == 9)
 		{
-			putchar('0' + counter);
 			counter++;
 			continue;
-			
 		}
-		putchar('0' + counter);
-	        putchar(',');
+		putchar(',');
 		putchar(' ');
 		counter++;
 	}
 	putchar('\n');
-}	
+
+	return (0);
+}
