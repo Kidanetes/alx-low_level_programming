@@ -9,7 +9,7 @@ int main(void)
 	char digit = '0';
 	char lowercase = 'a';
 	int counter = 0;
-	
+
 	while (counter < 16)
 	{
 		if (counter < 10)
