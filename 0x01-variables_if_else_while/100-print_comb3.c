@@ -16,6 +16,10 @@ int main(void)
 		{
 			putchar('0' + counter);
 			putchar('0' + counter2);
+			if (couter == 9)
+			{
+				continue;
+			}
 			putchar(',');
 			putchar(' ');
 			counter2++;
