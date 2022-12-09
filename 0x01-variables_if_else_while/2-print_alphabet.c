@@ -9,7 +9,8 @@ int main(void)
 {
 	char letter = 'a';
 	int counter = 0;
-	while (counter < 26 )
+	
+	while ( counter < 26)
 	{
 		putchar(letter);
 		counter++;
