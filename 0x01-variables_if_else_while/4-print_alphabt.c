@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char lowercas = 'a';
+	char lowercase = 'a';
 	int counter = 0;
 
 	while (counter < 26)
