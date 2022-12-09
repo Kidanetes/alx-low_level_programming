@@ -16,12 +16,12 @@ int main(void)
 		{
 			putchar('0' + counter);
 			putchar('0' + counter2);
-			if (counter == 8 && counter2 == 9)
+			if (counter != 8 && counter2 != 9)
 			{
-				continue;
+				putchar(',');
+				putchar(' ');
+				
 			}
-			putchar(',');
-			putchar(' ');
 			counter2++;
 		}
 		counter++;
