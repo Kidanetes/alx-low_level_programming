@@ -10,7 +10,7 @@ int main(void)
 
 	while (count < 10)
 	{
-		putchar('0'+count);
+		putchar('0' + count);
 		count++;
 	}
 	putchar('\n');
