@@ -16,12 +16,14 @@ int main(void)
 		if (lowercase == 'e' || lowercase == 'q')
 		{
 			lowercase++;
+			counter++;
 			continue;
 		}
 		putchar(lowercase);
 		lowercase++;
 		counter++;
 	}
+	putchar('\n');
 	
 	return (0);
 }
