@@ -14,10 +14,14 @@ int main(void)
 		if (counter == 9)
 		{
 			putchar('0' + counter);
+			counter++;
+			continue;
+			
 		}
 		putchar('0' + counter);
 	        putchar(',');
 		putchar(' ');
+		counter++;
 	}
 	putchar('\n');
 }	
