@@ -9,11 +9,11 @@ int main(void)
 	int counter1 = 0;
 	int counter2;
 	int counter3;
-	
+
 	while (counter1 < 8)
 	{
 		counter2 = counter1 + 1;
-		while ( counter2 < 9)
+		while (counter2 < 9)
 		{
 			counter3 = counter2 + 1;
 			while (counter3 < 10)
@@ -35,4 +35,4 @@ int main(void)
 	putchar('\n');
 
 	return (0);
-}	
+}
