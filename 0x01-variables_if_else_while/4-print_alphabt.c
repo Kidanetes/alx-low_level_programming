@@ -19,7 +19,7 @@ int main(void)
 			continue;
 		}
 		putchar(lowercase);
-		lowercase++
+		lowercase++;
 		counter++;
 	}
 	
