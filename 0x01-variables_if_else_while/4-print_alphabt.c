@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char lowercas = 'a';
+	char lowercase = 'a';
 	int counter = 0;
 
 	while (counter < 26)
@@ -16,13 +16,15 @@ int main(void)
 		if (lowercase == 'e' || lowercase == 'q')
 		{
 			lowercase++;
+			counter++;
 			continue;
 		}
 		putchar(lowercase);
-		lowercase++
+		lowercase++;
 		counter++;
 	}
-	
+	putchar('\n');
+
 	return (0);
 }
 
