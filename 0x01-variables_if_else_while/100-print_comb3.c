@@ -19,7 +19,7 @@ int main(void)
 			if (counter != 8 || counter2 != 9)
 			{
 				putchar(',');
-				putchar(' ');	
+				putchar(' ');
 			}
 			counter2++;
 		}
