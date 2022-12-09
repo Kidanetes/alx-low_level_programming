@@ -19,7 +19,7 @@ int main(void)
 			putchar(' ');
 			putchar((number2 / 10) + '0');
 			putchar((number2 % 10) + '0');
-			if(number1 != 98 || number2 != 99)
+			if (number1 != 98 || number2 != 99)
 			{
 				putchar(',');
 				putchar(' ');
@@ -32,4 +32,3 @@ int main(void)
 
 		return (0);
 }
-
