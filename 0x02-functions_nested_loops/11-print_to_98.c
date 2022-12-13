@@ -8,10 +8,12 @@
 void print_to_98(int n)
 {
 	int tmp;
+	boolean flag;
 	
 	while (n < 98)
 	{
 		tmp = n;
+		flag = false;
 		if (tmp < 0)
 		{
 			_putchar('-');
@@ -21,6 +23,7 @@ void print_to_98(int n)
 		{
 			_putchar('0' + (tmp / 100));
 			tmp = tmp % 100;
+			flag = true;
 		}
 		if ((tmp / 10) != 0 || (tmp / 100) != 0)
 			_putchar('0' + (tmp / 10));
@@ -32,12 +35,14 @@ void print_to_98(int n)
 	while (n > 98)
 	{
 		tmp = n;
+		flag = false;
 		if ((tmp / 100) != 0)
 		{
 			_putchar('0' + (tmp / 100));
 			tmp = tmp % 100;
+			flag = true;
 		}
-		if ((tmp / 10) != 0 || (tmp / 100) != 0)
+		if ((tmp / 10) != 0 || flag)
 			_putchar('0' + (tmp / 10));
 		_putchar('0' + (tmp % 10));
 		_putchar(',');
