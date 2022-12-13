@@ -27,7 +27,6 @@ void print_times_table(int n)
 					if (prod == 0)
 						continue;
 				}
-				
 				k /= 10;
 			}
 			_putchar(',');
