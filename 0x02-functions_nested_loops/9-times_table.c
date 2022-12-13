@@ -25,11 +25,15 @@ void times_table(void)
 				_putchar('0' + (product / 10));
 				_putchar('0' + (product % 10));
 			}
-			_putchar(',');
-			_putchar(' ');
+			if (j < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			j++;
 		}
-		_putchar('\n');
+		if (i < 9)
+			_putchar('\n');
 		i++;
 	}
 }
