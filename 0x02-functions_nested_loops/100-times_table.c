@@ -29,6 +29,7 @@ void print_times_table(int n)
 						k /= 10;
 						break;
 					}
+					prod = prod % 10;
 				}
 				k /= 10;
 			}
