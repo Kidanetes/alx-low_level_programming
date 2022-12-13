@@ -3,9 +3,7 @@
  * _islower - checks wheter c is lowercase or not
  * c - is a parameter for _islower
  *
- * Retrun: 1 or 0
- * 1: if @c is lowercase
- * 0: otherwise 
+ * Return: 1 if c is lowercase or 0 otherwise
  */
 int _islower(int c)
 {
