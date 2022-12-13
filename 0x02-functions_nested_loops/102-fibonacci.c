@@ -6,8 +6,9 @@
  */
 int main(void)
 {
-	int count =  1, sum = 1, prev = 0;
-	int tmp;
+	int count =  1;
+	long sum = 1, prev = 0,tmp;
+
 	while (count <= 50)
 	{
 		tmp = sum;
