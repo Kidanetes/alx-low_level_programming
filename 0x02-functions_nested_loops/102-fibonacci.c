@@ -7,7 +7,7 @@
 int main(void)
 {
 	int count =  1;
-	unsigned long sum = 1, prev = 0,tmp;
+	unsigned long sum = 1, prev = 0, tmp;
 
 	while (count <= 50)
 	{
@@ -20,6 +20,7 @@ int main(void)
 		prev = tmp;
 		count++;
 	}
+	printf("\n");
 
 	return (0);
 }
