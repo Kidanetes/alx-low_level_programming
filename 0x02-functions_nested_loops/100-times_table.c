@@ -28,6 +28,7 @@ void print_times_table(int n)
 					{
 						k /= 10;
 						continue;
+					}
 				}
 				k /= 10;
 			}
