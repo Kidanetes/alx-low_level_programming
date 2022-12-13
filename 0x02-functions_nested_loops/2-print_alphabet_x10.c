@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * print_alphabet_x10: prints the lower case alphabet letter 10 times.
+ * print_alphabet_x10 - prints the lower case alphabet letter 10 times.
  *
  * Return: nothing
  */
@@ -12,7 +12,7 @@ void print_alphabet_x10(void)
 
 	while (count1 < 10)
 	{
-	 	count2 = 0;
+		count2 = 0;
 		lowercase = 'a';
 		while (count2 < 26)
 		{
