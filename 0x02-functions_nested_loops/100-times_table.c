@@ -18,20 +18,24 @@ void print_times_table(int n)
 			prod = i * j;
 			k = 100; 
 			status = 0;
-			while(k >= 1)
-			{
-				if (prod == 0)
+			if (prod == 0)
 				{
 					_putchar('0');
 					status++;
 				}
-			        else if (prod / k != 0 || status > 0 || prod == 0)
+			else
+			{
+				while(k >= 1)
 				{
-					_putchar('0' + (prod / k));
-					prod = prod % 10;
-					status++;
+				
+			   		if (prod / k != 0 || status > 0 )
+					{
+						_putchar('0' + (prod / k));
+						prod = prod % 10;
+						status++;
+					}
+					k /= 10;
 				}
-				k /= 10;
 			}
 			if (j < n)
 				_putchar(',');
