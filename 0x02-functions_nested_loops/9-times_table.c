@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * times_table -  print  multiplication table 0 - 9
+ * times_table - print  multiplication table 0 - 9
  *
  * Return: nothing
  */
@@ -15,10 +15,10 @@ void times_table(void)
 		while (j < 10)
 		{
 			product = i * j;
-			if(product < 10)
+			if (product < 10)
 			{
 				_putchar(' ');
-				_putchar('0' + product);	
+				_putchar('0' + product);
 			}
 			else
 			{
@@ -37,4 +37,3 @@ void times_table(void)
 		i++;
 	}
 }
-			
