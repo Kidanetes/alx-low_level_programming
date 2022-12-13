@@ -25,6 +25,8 @@ void print_times_table(int n)
 					_putchar('0' + (prod / k));
 					status++;
 					if (prod == 0)
+					{
+						k /= 10;
 						continue;
 				}
 				k /= 10;
