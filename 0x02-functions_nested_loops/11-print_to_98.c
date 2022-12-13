@@ -22,7 +22,7 @@ void print_to_98(int n)
 			_putchar('0' + (tmp / 100));
 			tmp = tmp % 100;
 		}
-		if ((tmp / 10) != 0)
+		if ((tmp / 10) != 0 || (tmp / 100) != 0)
 			_putchar('0' + (tmp / 10));
 		_putchar('0' + (tmp % 10));
 		_putchar(',');
@@ -37,7 +37,7 @@ void print_to_98(int n)
 			_putchar('0' + (tmp / 100));
 			tmp = tmp % 100;
 		}
-		if ((tmp / 10) != 0)
+		if ((tmp / 10) != 0 || (tmp / 100) != 0)
 			_putchar('0' + (tmp / 10));
 		_putchar('0' + (tmp % 10));
 		_putchar(',');
