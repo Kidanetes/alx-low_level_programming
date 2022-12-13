@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int count =  1, sum = 1, prev = 1;
+	int count =  1, sum = 1, prev = 0;
 	int tmp;
 	while (count <= 50)
 	{
@@ -22,4 +22,3 @@ int main(void)
 
 	return (0);
 }
-
