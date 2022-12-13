@@ -6,38 +6,41 @@
  */
 void print_times_table(int n)
 {
-	int i = 0;
-	int j,k,prod;
-	int status;
+	int i = 0, j, prod,k,status;
 
-	while (i <= n && n >= 0 && n <= 15)
+	if (n >= 0 && n <= 15)
 	{
-		j = 0;
-		while (j <= n)
+		while (i <= n)
 		{
-			prod = i * j;
-			k = 100; 
-			status = 0;
-			while(k >= 1)
+			j = 0;
+			while (j <= n)
 			{
-				if ( prod / k != 0 || status > 0)
+				prod = i * j;
+				if (j == 0)
+					_putchar('0');
+				else
 				{
-					_putchar('0' + (prod / k);
-					status++;
+					k = 100;
+					status = 0;
+					_putchar(' ');
+					while (k >= 1)
+					{ 
+						if (prod / k == 0 && status == 0)
+							_putchar(' ');
+						else
+							status = 1;
+						_putchar('0' + (prod / k));
+					        prod = prod % k;
+					}
 				}
-				k /= 10;
+				if (j < n)
+					_putchar(',');
+				j++;
 			}
-			_putchar(',);
-			while (status < 4 && j < n)
-			{ 
-				_putchar(' ');
-				status++;
-			}
-			j++;
-		}
-		if (i < n)
-			_putchar('\n');
+			if (i < n)
+				_putchar('\n');
 			i++;
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
