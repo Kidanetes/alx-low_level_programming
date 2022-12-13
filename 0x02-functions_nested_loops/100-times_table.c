@@ -27,7 +27,7 @@ void print_times_table(int n)
 					if (prod == 0)
 					{
 						k /= 10;
-						continue;
+						break;
 					}
 				}
 				k /= 10;
