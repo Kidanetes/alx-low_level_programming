@@ -20,7 +20,7 @@ void print_times_table(int n)
 			status = 0;
 			while(k >= 1)
 			{
-				if ( prod / k != 0 || status > 0 || prod = 0)
+				if ( prod / k != 0 || status > 0 || prod == 0)
 				{
 					_putchar('0' + (prod / k));
 					status++;
