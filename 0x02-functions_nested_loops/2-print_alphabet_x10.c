@@ -1,6 +1,7 @@
 #include "main.h"
 /*
- * print_alphabet_x10 - uses _putchar to print the lower case alphabet letters
+ * print_alphabet_x10 - check main 
+ * uses _putchar to print the lower case alphabet letters
  * followed by newline 10 times
  *
  * Return: nothing
