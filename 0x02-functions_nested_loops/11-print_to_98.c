@@ -7,7 +7,7 @@
  */
 void print_to_98(int n)
 {
-	int tmp;
+	int tmp,tmp2;
 	
 	while (n < 98)
 	{
@@ -47,4 +47,3 @@ void print_to_98(int n)
 	_putchar('8');
 	_putchar('\n');
 }
-
