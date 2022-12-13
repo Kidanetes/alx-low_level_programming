@@ -22,7 +22,7 @@ void print_times_table(int n)
 			{
 				if ( prod / k != 0 || status > 0)
 				{
-					_putchar('0' + (prod / k);
+					_putchar('0' + (prod / k));
 					status++;
 				}
 				k /= 10;
@@ -37,7 +37,7 @@ void print_times_table(int n)
 		}
 		if (i < n)
 			_putchar('\n');
-			i++;
+		i++;
 	}
 	_putchar('\n');
 }
