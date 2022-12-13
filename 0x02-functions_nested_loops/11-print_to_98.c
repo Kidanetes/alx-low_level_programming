@@ -25,7 +25,7 @@ void print_to_98(int n)
 			tmp = tmp % 100;
 			flag = true;
 		}
-		if ((tmp / 10) != 0 || (tmp / 100) != 0)
+		if ((tmp / 10) != 0 || flag)
 			_putchar('0' + (tmp / 10));
 		_putchar('0' + (tmp % 10));
 		_putchar(',');
