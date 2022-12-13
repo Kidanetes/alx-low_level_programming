@@ -20,16 +20,16 @@ void print_times_table(int n)
 			status = 0;
 			while(k >= 1)
 			{
-				if ( prod / k != 0 || status > 0 || prod == 0)
+				if (prod == 0)
+				{
+					_putchar('0');
+					status++;
+				}
+			        else if (prod / k != 0 || status > 0 || prod == 0)
 				{
 					_putchar('0' + (prod / k));
-					status++;
-					if (prod == 0)
-					{
-						k /= 10;
-						break;
-					}
 					prod = prod % 10;
+					status++;
 				}
 				k /= 10;
 			}
@@ -46,5 +46,4 @@ void print_times_table(int n)
 			_putchar('\n');
 		i++;
 	}
-	_putchar('\n');
 }
