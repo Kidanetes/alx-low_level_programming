@@ -6,8 +6,9 @@
  *
  * Return: n + m
  */
-int add(int n , int m)
+int add(int n, int m)
 {
-	int sum = n + m;
-	return (sum);
+	int result;
+	result = n + m;
+	return (result);
 }
