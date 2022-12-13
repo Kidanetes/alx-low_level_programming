@@ -9,7 +9,7 @@ void print_to_98(int n)
 {
 	int tmp;
 	int status;
-	
+
 	while (n < 98 || n > 98)
 	{
 		tmp = n;
@@ -33,7 +33,7 @@ void print_to_98(int n)
 		if (n < 98)
 			n++;
 		if (n > 98)
-			n--
+			n--;
 	}
 	_putchar('9');
 	_putchar('8');
