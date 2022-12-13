@@ -11,8 +11,8 @@ void print_alphabet(void)
 
 	while (count < 26)
 	{
-		-putchar(lowercase);
+		_putchar(lowercase);
 		count++;
 	}
-	-putchar('\n');
+	_putchar('\n');
 }
