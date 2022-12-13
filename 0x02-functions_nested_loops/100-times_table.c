@@ -27,7 +27,7 @@ void print_times_table(int n)
 				}
 				k /= 10;
 			}
-			_putchar(',);
+			_putchar(',');
 			while (status < 4 && j < n)
 			{ 
 				_putchar(' ');
