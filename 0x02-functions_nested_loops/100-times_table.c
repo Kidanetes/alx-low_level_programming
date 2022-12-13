@@ -9,47 +9,49 @@ void print_times_table(int n)
 	int i = 0;
 	int j,prod;
 	int tmp;
-	
-
-	while (i <= n && n >= 0 && n <= 15)
+	if (n >= 0 && n <= 15
 	{
-		j = 0;
-		while (j <= n)
+		while (i <= n)
 		{
-			prod = i * j;
-			if (j == 0)
-				_putchar('0');
-			else
+			j = 0;
+			while (j <= n)
 			{
-				if (prod > 99)
-				{
-					_putchar(' ');
-					_putchar('0' + (prod / 100));
-					tmp = prod % 100;
-					_putchar('0' + (tmp / 10));
-					_putchar('0' + (prod % 10));
-		        	}
-				else if (prod > 9)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + (tmp / 10));
-					_putchar('0' + (prod % 10));
-				}
+				prod = i * j;
+				if (j == 0)
+					_putchar('0');
 				else
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + (prod % 10));
+					if (prod > 99)
+					{
+						_putchar(' ');
+						_putchar('0' + (prod / 100));
+						tmp = prod % 100;
+						_putchar('0' + (tmp / 10));
+						_putchar('0' + (prod % 10));
+		        		}
+					else if (prod > 9)
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar('0' + (prod / 10));
+						_putchar('0' + (prod % 10));
+					}
+					else
+					{
+						_putchar(' ');
+						_putchar(' ');
+						_putchar(' ');
+						_putchar('0' + (prod % 10));
+					}
 				}
+				if (j < n)
+					_putchar(',');
+				j++;
 			}
-			if (j < n)
-				_putchar(',');
-			j++;
+			if (i < n)
+				_putchar('\n');
+			i++;
 		}
-		if (i < n)
-			_putchar('\n');
-		i++;
+		_putchar('\n');
 	}
 }
