@@ -1,5 +1,6 @@
 #include "main.h"
-/** main- Entry point
+/** 
+ * main- Entry point
  *
  * Return: Always 0(Success)
  */
@@ -13,6 +14,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-	
+
 	return (0);
 }
