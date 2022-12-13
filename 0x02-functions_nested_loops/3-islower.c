@@ -1,8 +1,11 @@
 #include "main.h"
 /**
- * _islower - checks wheter @c is lowercase or not
+ * _islower - checks wheter c is lowercase or not
+ * c - is a parameter for _islower
  *
- * Retrun: 1 if @c is lowercase, 0 otherwise 
+ * Retrun: 1 or 0
+ * 1: if @c is lowercase
+ * 0: otherwise 
  */
 int _islower(int c)
 {
@@ -10,5 +13,5 @@ int _islower(int c)
 		return (1);
 	else
 		return (0);
-	
+
 }
