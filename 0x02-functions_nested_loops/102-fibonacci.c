@@ -14,9 +14,9 @@ int main(void)
 		tmp = sum;
 		sum = sum + prev;
 		if (count < 50)
-			printf("%d, ", (unsigned int) sum);
+			printf("%ld, ", sum);
 		else
-			printf("%d", (unsigned int) sum);
+			printf("%ld", sum);
 		prev = tmp;
 		count++;
 	}
