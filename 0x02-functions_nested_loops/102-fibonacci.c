@@ -17,7 +17,7 @@ int main(void)
 		else
 			printf("%d", sum);
 		prev = sum;
-		count++
+		count++;
 	}
 
 	return (0);
