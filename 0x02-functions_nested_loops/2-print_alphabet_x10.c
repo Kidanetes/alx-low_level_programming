@@ -13,6 +13,7 @@ void print_alphabet_x10(void)
 	while (count1 < 10)
 	{
 	 	count2 = 0;
+		lowercase = 'a';
 		while (count2 < 26)
 		{
 			_putchar(lowercase);
