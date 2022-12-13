@@ -7,9 +7,9 @@
 void print_times_table(int n)
 {
 	int i = 0;
-	int j, prod;
-	int tmp;
-	
+	int j, prod,k;
+	int tmp,status;
+
 	if (n >= 0 && n <= 15)
 	{
 		while (i <= n)
@@ -22,27 +22,17 @@ void print_times_table(int n)
 					_putchar('0');
 				else
 				{
-					if (prod > 99)
-					{
-						_putchar(' ');
-						_putchar('0' + (prod / 100));
-						tmp = prod % 100;
-						_putchar('0' + (tmp / 10));
-						_putchar('0' + (prod % 10));
-					}
-					else if (prod > 9)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar('0' + (prod / 10));
-						_putchar('0' + (prod % 10));
-					}
-					else
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-						_putchar('0' + (prod % 10));
+					k = 100;
+					status = 0;
+					_putchar(' ');
+					while (k >= 1)
+					{ 
+						if (prod / k == 0 && status == 0)
+							_putchar(' ');
+						else
+							status = 1;
+						_putchar('0' + (prod / k));
+					        prod = prod % k;
 					}
 				}
 				if (j < n)
