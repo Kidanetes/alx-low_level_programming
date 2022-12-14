@@ -2,7 +2,7 @@
 /**
  * print_times_table - print  multiplication table 0 - n
  * @n: input parameter
- *format - keeps the format of the numbers
+ * format - keeps the format of the numbers
  *@n: input parameter
  * Return: nothing
  */
@@ -24,7 +24,7 @@ void print_times_table(int n)
 					format(prod);
 				if (j < n)
 					_putchar(',');
-				
+
 				j++;
 			}
 			if (i < n)
