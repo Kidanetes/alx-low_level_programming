@@ -2,8 +2,7 @@
 /**
  * print_times_table - print  multiplication table 0 - n
  * @n: input parameter
- * format - keeps the format of the numbers
- *@n: input parameter
+ *
  * Return: nothing
  */
 void print_times_table(int n)
@@ -34,6 +33,12 @@ void print_times_table(int n)
 		_putchar('\n');
 	}
 }
+/**
+* format - keeps the format of the numbers
+* @n: input parameter
+*
+* return: Nothing
+*/
 void format(int n)
 {
 	int tmp;
