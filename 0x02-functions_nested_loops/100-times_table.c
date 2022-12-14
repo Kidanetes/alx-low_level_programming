@@ -55,6 +55,7 @@ void format(int n)
 	{
 	_putchar(' ');
 	_putchar(' ');
+	_putchar(' ');	
 	_putchar('0' + (n % 10));
 	}
 }
