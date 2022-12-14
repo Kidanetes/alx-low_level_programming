@@ -16,7 +16,10 @@ void print_times_table(int n)
 			while (j <= n)
 			{
 				prod = i * j;
-				format(prod);
+				if ( j == 0)
+					_putchar('0');
+				else
+					format(prod);
 				if (j < n)
 					_putchar(',');
 					
