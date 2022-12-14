@@ -13,7 +13,7 @@ int main(void)
 	{
 		tmp = (unsigned long) now;
 		now = (unsigned long) now + (unsigned long) prev;
-		if ( count < 97)
+		if (count < 97)
 			printf("%ld, ", now);
 		else
 			printf("%ld", now);
