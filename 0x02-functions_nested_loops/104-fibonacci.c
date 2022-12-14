@@ -11,8 +11,8 @@ int main(void)
 
 	while (count < 98)
 	{
-		tmp = now;
-		now = now + prev;
+		tmp = (unsigned long) now;
+		now = (unsigned long) now + (unsigned long) prev;
 		if ( count < 97)
 			printf("%ld, ", now);
 		else
