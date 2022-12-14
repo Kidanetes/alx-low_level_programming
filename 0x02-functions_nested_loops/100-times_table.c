@@ -2,6 +2,8 @@
 /**
  * print_times_table - print  multiplication table 0 - n
  * @n: input parameter
+ *format - keeps the format of the numbers
+ *@n: input parameter
  * Return: nothing
  */
 void print_times_table(int n)
@@ -16,26 +18,26 @@ void print_times_table(int n)
 			while (j <= n)
 			{
 				prod = i * j;
-				if ( j == 0)
+				if (j == 0)
 					_putchar('0');
 				else
 					format(prod);
 				if (j < n)
 					_putchar(',');
-					
+				
 				j++;
 			}
 			if (i < n)
 				_putchar('\n');
 			i++;
 		}
-                _putchar('\n');
+		_putchar('\n');
 	}
 }
-void format(int n) 
+void format(int n)
 {
 	int tmp;
-	
+
 	if (n > 99)
 	{
 		_putchar(' ');
@@ -55,7 +57,7 @@ void format(int n)
 	{
 	_putchar(' ');
 	_putchar(' ');
-	_putchar(' ');	
+	_putchar(' ');
 	_putchar('0' + (n % 10));
 	}
 }
