@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long now = 1, prev = 0, tmp;
+	unsigned long int now = 1, prev = 0, tmp;
 	int count = 0;
 
 	while (count < 98)
