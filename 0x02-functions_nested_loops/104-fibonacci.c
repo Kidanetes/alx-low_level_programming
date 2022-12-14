@@ -11,12 +11,12 @@ int main(void)
 
 	while (count < 98)
 	{
-		tmp = (unsigned long) now;
-		now = (unsigned long) now + (unsigned long) prev;
+		tmp =  now;
+		now = now + prev;
 		if (count < 97)
-			printf("%ld, ", now);
+			printf("%lu, ", now);
 		else
-			printf("%ld", now);
+			printf("%lu", now);
 		prev = tmp;
 		count++;
 	}
