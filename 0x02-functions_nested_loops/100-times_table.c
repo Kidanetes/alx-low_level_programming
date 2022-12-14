@@ -41,7 +41,7 @@ void format(int n)
 		_putchar('0' + (tmp / 10));
 		_putchar('0' + (tmp % 10));
 	}
-	else if (prod > 9)
+	else if (n > 9)
 	{
 		_putchar(' ');
 		_putchar(' ');
