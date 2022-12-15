@@ -6,18 +6,20 @@
  */
 void print_triangle(int size)
 {
-	int count = size;
+	int count = size - 1;
 	int count2;
 
 	while (count > 0)
 	{
-		count2 = 1;
+		count2 = 0;
 		while (count2 < count)
 		{
 			_putchar(' ');
 			count2++;
 		}
-		_putchar('#');
+		count2 = count; 
+		while (count2 < size)
+			_putchar('#');
 		_putchar('\n');
 		count--;
 	}
