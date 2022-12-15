@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - entry point
  *
@@ -11,13 +10,13 @@ int main(void)
 	unsigned long int count = 2, count2, max = 612852475143;
 	int status;
 
-	while (count <= number)
+	while (count < number)
 	{
 		if (number % count == 0)
 		{
 			status = 0;
 			count2 = 2;
-			while (count2 <= count)
+			while (count2 < count)
 			{
 				if (count % count2 == 0)
 				{
