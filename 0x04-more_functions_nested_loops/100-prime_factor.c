@@ -22,7 +22,7 @@ int main(void)
 		}
 		count++;
 	}
-	printf("%d", max);
+	printf("%d\n", max);
 
 	return (0);
 }
