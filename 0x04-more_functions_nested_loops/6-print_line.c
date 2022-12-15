@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_line - prints a line followed by 
+ * print_line - prints a line followed by
  * new line
  * @n: input parameter
  * Return: void
