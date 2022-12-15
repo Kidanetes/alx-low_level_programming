@@ -4,7 +4,6 @@
  *
  * Return: void
  */
-
 void more_numbers(void)
 {
 	int count = 0;
