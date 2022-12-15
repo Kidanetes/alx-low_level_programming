@@ -17,7 +17,7 @@ int main(void)
 		{
 			status = 0;
 			count2 = 2;
-			while (count2 < count)
+			while (count2 <= count/2)
 			{
 				if (count % count2 == 0)
 				{
