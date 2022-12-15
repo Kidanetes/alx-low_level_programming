@@ -7,13 +7,30 @@
 
 int main(void)
 {
-	unsigned long int i = 3, n = 612852475143;
+        unsigned long int number = 612852475143;
+	unsigned long int  count = 2,count2, max = -1;
+	int status;
 
-	for (; i < 12057; i += 2)
+	while (count <= number)
 	{
-		while (n % i == 0 && n != i)
-			n /= i;
+		if (number % count == 0)
+		{
+			status = 0;
+			count2 = 2;
+			while (count2 < count)
+			{
+				if (count % count2 == 0)
+				{
+					status = 1;
+					break;
+				}
+				count2++;
+			}
+			if (status == 0)
+				max = count;
+		}
+		count++;
 	}
-	printf("%lu\n", n);
+	       printf("%lu\n", max);
 	return (0);
 }
