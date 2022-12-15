@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	long long number = 612852475143;
-	long long count = 2, count2, max = 612852475143;
+	long  number = 612852475143;
+	long count = 2, count2, max = 612852475143;
 	int status;
 
 	while (count < number)
@@ -30,7 +30,7 @@ int main(void)
 		}
 		count++;
 	}
-	printf("%lu", max);
+	printf("%ld", max);
 	putchar('\n');
 
 	return (0);
