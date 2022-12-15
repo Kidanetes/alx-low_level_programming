@@ -9,10 +9,10 @@ void print_triangle(int size)
 	int count1 = 0;
 	int count2;
 
-	while (count > 0)
+	while (count1 < size)
 	{
 		count2 = 0;
-		while (count2 < size - count1 - 1)
+		while (count2 < (size - count1 - 1))
 		{
 			_putchar(' ');
 			count2++;
