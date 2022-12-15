@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_square - print a square
- * @n: input parameter
+ * @size: input parameter
  * Return: void
  */
 void print_square(int size)
@@ -9,10 +9,10 @@ void print_square(int size)
 	int count = 0;
 	int count2;
 
-	while (count < n)
+	while (count < size)
 	{
 		count2 = 0;
-		while (count2 < n)
+		while (count2 < size)
 		{
 			_putchar('#');
 			count2++;
@@ -20,6 +20,6 @@ void print_square(int size)
 		_putchar('\n');
 		count++;
 	}
-	if (n <= 0)
+	if (size <= 0)
 		_putchar('\n');
 }
