@@ -7,7 +7,7 @@
 int main(void)
 {
 	int number = 612852475143;
-	int count = 0;
+	int count = 2;
 	int max =  1;
 	int status;
 
