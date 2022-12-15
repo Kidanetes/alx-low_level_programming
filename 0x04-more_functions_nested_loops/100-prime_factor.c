@@ -13,11 +13,10 @@ int main(void)
 
 	while (count <= (number / 2))
 	{
-		status = 0;
 		if (number % count == 0)
 		{
-			int status = 0;
-			unsigned long int count2 = 2;
+			status = 0;
+			count2 = 2;
 			while (count2 <= (count / 2))
 			{
 				if (n % count == 0)
