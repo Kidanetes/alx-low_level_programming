@@ -30,7 +30,8 @@ int main(void)
 		}
 		count++;
 	}
-	printf("%lu\n", max);
+	printf("%lu", max);
+	putchar('\n');
 
 	return (0);
 }
