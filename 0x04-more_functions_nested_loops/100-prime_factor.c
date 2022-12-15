@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int number = 612852475143;
+	int number = (int) 612852475143;
 	int count = 2;
-	int max =  1;
+	int max ;
 	int status;
 
 	while (count <= (number / 2))
