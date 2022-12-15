@@ -11,7 +11,7 @@ int main(void)
 	while (count <= 100)
 	{
 		if (count % 3 == 0 && count % 5 == 0)
-			pritnf("FizzBuzz");
+			printf("FizzBuzz");
 		else if (count % 3 == 0)
 			printf("Fizz");
 		else if (count % 5 == 0)
