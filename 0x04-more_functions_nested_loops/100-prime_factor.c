@@ -19,7 +19,7 @@ int main(void)
 			count2 = 2;
 			while (count2 <= (count / 2))
 			{
-				if (n % count == 0)
+				if (count % count2 == 0)
 				{
 					status = 1;
 					break;
