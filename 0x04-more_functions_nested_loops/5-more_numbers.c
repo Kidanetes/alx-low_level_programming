@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * more_numbers - print from 0 to 14, 10 times
- *
+ * followed by new line
  * Return: void
  */
 void more_numbers(void)
@@ -14,7 +14,7 @@ void more_numbers(void)
 		count2 = 0;
 		while (count2 < 15)
 		{
-			if(count2 > 9)
+			if (count2 > 9)
 				_putchar('0' + (count2 / 10));
 			_putchar('0' + (count2 % 10));
 			count2++;
