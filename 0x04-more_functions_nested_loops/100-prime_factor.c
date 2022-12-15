@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  *
@@ -7,7 +8,7 @@
 int main(void)
 {
 	unsigned long int number = 612852475143;
-	unsigned long int count = 2, max ;
+	unsigned long int count = 2, max = 1;
 	int status;
 
 	while (count <= (number / 2))
@@ -51,5 +52,3 @@ int check_prime(unsigned long int n)
 	else
 		return (0);
 }
-
-		
