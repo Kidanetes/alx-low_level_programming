@@ -18,7 +18,7 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d",count);
-		if (count < 1000)
+		if (count < 100)
 			putchar(' ');
 		count++;
 	}
