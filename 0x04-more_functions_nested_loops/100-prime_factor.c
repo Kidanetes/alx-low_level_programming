@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long int  number = 612852475143;
+	unsigned long int  number = 52475143;
 	unsigned long int count = 2, count2, max = 1;
 	int status;
 
