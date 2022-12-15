@@ -4,34 +4,16 @@
  *
  * Return: 0
  */
+
 int main(void)
 {
-	unsigned long int  number = 52475143;
-	unsigned long int count = 2, count2, max = 1;
-	int status;
+	unsigned long int i = 3, n = 612852475143;
 
-	while (count < number)
+	for (; i < 12057; i += 2)
 	{
-		if (number % count == 0)
-		{
-			status = 0;
-			count2 = 2;
-			while (count2 < count)
-			{
-				if (count % count2 == 0)
-				{
-					status = 1;
-					break;
-				}
-				count2++;
-			}
-			if (status == 0)
-				max = count;
-		}
-		count++;
+		while (n % i == 0 && n != i)
+			n /= i;
 	}
-	printf("%lu", max);
-	putchar('\n');
-
+	printf("%lu\n", n);
 	return (0);
 }
