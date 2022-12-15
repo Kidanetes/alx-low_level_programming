@@ -32,7 +32,7 @@ int main(void)
  * Return: 1 if n is prime, 0 otherwise
  */
 
-int check_prime(unsigned longint n)
+int check_prime(unsigned long int n)
 {
 	unsigned long int count = 2;
 	int status = 0;
