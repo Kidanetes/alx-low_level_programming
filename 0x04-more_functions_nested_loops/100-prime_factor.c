@@ -22,6 +22,7 @@ int main(void)
 		}
 		count++;
 	}
+	printf("%d", max);
 
 	return (0);
 }
