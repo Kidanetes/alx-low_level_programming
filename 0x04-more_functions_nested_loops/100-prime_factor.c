@@ -32,9 +32,9 @@ int main(void)
  * Return: 1 if n is prime, 0 otherwise
  */
 
-int check_prime(int n)
+int check_prime(unsigned longint n)
 {
-	int count = 2;
+	unsigned long int count = 2;
 	int status = 0;
 
 	while (count <= (n / 2))
