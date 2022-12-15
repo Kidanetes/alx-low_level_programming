@@ -27,7 +27,7 @@ int main(void)
 	return (0);
 }
 /**
- * check_prime - cheks wheter a  number is 
+ * check_prime - cheks wheter a number is 
  * prime or not
  * @n: input parameter
  * Return: 1 if n is prime, 0 otherwise
