@@ -6,9 +6,8 @@
  */
 int main(void)
 {
-	int number = (int) 612852475143;
-	int count = 2;
-	int max ;
+	unsigned long int number = 612852475143;
+	unsigned long int count = 2, max ;
 	int status;
 
 	while (count <= (number / 2))
