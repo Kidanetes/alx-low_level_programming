@@ -17,7 +17,7 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	
+
 	if (n <= 9)
 		_putchar('0' + n);
 	else
@@ -38,5 +38,4 @@ void print_number(int n)
 			count--;
 		}
 	}
-}	
-
+}
