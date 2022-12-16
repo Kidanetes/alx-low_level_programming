@@ -20,7 +20,7 @@ void print_number(int n)
 			n = -1 * n;
 		else
 		{
-			n = -1 * (n + 1);
+			n = -1 *(n + 1);
 			status = 1;
 		}
 	}
