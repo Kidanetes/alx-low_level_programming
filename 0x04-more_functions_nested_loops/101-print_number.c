@@ -39,7 +39,7 @@ void print_number(int n)
 		base = (int) base1;
 		while (count > 0)
 		{
-			if (count == 1 && status == 1)
+			if ((count == 1) && (status == 1))
 			{
 				_putchar('0' + (n / base + 1));
 			}
