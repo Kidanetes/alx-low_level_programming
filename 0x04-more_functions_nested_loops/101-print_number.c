@@ -14,11 +14,11 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n != - 2147483648)
-			n = - 1 * n;
+		if (n != -2147483648)
+			n = -1 * n;
 		else
 		{
-			n = - 1 * (n + 1);
+			n = -1 * (n + 1);
 			status = 1;
 		}
 	}
@@ -34,7 +34,7 @@ void print_number(int n)
 			count++;
 			base1 = base1 * 10;
 		}
-		base = (int) base1;
+		base = (int)base1;
 		while (count > 0)
 		{
 			if (count == 1 && status == 1)
