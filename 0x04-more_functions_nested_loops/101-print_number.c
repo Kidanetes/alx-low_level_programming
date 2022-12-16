@@ -17,13 +17,13 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n != -2147483648)
+		/*if (n != -2147483648)*/
 			n = -1 * n;
-		else
-		{
+		/*else*/
+		/*{*/
 			n = -1 * (n + 1);
 			status = 1;
-		}
+		/*}*/
 	}
 	if (n <= 9)
 		_putchar('0' + n);
