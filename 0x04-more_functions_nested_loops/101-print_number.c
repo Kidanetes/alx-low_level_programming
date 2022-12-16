@@ -30,7 +30,7 @@ void print_number(int n)
 		base = base / 10;
 		while (count > 0)
 		{
-			_putchar('0' + (n / base))
+			_putchar('0' + (n / base));
 			n = n % base;
 			base = base / 10;
 			count--;
