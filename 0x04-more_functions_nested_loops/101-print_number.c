@@ -7,7 +7,9 @@
  */
 void print_number(int n)
 {
-	int count = 0, base, status = 0;
+	int count = 0;
+	int base;
+	int status = 0;
 	int tmp;
 	float base1 = 0.1;
 	
@@ -31,7 +33,7 @@ void print_number(int n)
 		{
 			tmp = tmp / 10;
 			count++;
-			base1 = base1 * 10;
+			base1 = base1 * 10.0;
 		}
 		base = (int) base1;
 		while (count > 0)
