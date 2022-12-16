@@ -9,7 +9,7 @@ void print_number(int n)
 {
 	int count = 0, base, status = 0;
 	int tmp;
-	
+
 	float base1 = 0.1;
 
 	if (n < 0)
@@ -19,7 +19,7 @@ void print_number(int n)
 			n = -1 * n;
 		else
 		{
-			n = -1 *(n + 1);
+			n = -1 * (n + 1);
 			status = 1;
 		}
 	}
