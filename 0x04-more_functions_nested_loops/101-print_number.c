@@ -16,7 +16,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n != INT_MIN)
+		if (n != (-2147483647 - 1))
 			n = -1 * n;
 		else
 		{
@@ -39,7 +39,7 @@ void print_number(int n)
 		base = (int) base1;
 		while (count > 0)
 		{
-			if ( count == 1 && status == 1)
+			if (count == 1 && status == 1)
 			{
 				_putchar('1' + (n / base));
 			}
