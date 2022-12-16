@@ -11,22 +11,26 @@ void print_number(int n)
 	int base;
 	int status = 0;
 	int tmp;
-	
+
 	float base1 = 0.1;
-	
+
 	if (n < 0)
 	{
 		_putchar('-');
-		/*if (n != -2147483648)*/
+		if (n != -2147483648)
+		{
 			n = -1 * n;
-		/*else*/
-		/*{*/
-		/*	n = -1 * (n + 1);*/
+		}
+		else
+		{
+			n = -1 * (n + 1);
 			status = 1;
-		/*}*/
+		}
 	}
 	if (n <= 9)
+	{
 		_putchar('0' + n);
+	}
 	else
 	{
 		tmp = n;
@@ -37,6 +41,7 @@ void print_number(int n)
 			base1 = base1 * 10.0;
 		}
 		base = (int) base1;
+
 		while (count > 0)
 		{
 			if ((count == 1) && (status == 1))
@@ -44,7 +49,9 @@ void print_number(int n)
 				_putchar('0' + (n / base + 1));
 			}
 			else
+			{
 				_putchar('0' + (n / base));
+			}
 			n = n % base;
 			base = base / 10;
 			count--;
