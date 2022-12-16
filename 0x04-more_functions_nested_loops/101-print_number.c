@@ -10,7 +10,7 @@ void print_number(int n)
 	int count = 0, base, status = 0;
 	int tmp;
 	float base1 = 0.1;
-
+	
 	if (n < 0)
 	{
 		_putchar('-');
@@ -22,7 +22,6 @@ void print_number(int n)
 			status = 1;
 		}
 	}
-
 	if (n <= 9)
 		_putchar('0' + n);
 	else
