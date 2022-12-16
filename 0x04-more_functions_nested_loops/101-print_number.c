@@ -17,7 +17,7 @@ void print_number(int n)
 		n = -n;
 	}
 	int tmp = n;
-	if (n < 9)
+	if (n <= 9)
 		_putchar('0' + n);
 	else
 	{
