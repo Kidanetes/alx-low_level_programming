@@ -9,5 +9,8 @@ void print_line(int n);
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
+<<<<<<< HEAD
 int check_prime(unsigned long int n);
 void print_number(int n);
+=======
+>>>>>>> 3807b0259ba0775ef637066b9d9e83f983416228
