@@ -5,12 +5,12 @@
  * @n: input parameter
  * Return: void
  */
-
 void print_number(int n)
 {
 	int count = 0;
 	float base1 = 0.1;
-	int base, status = 0;
+	int base;
+	int status = 0;
 	int tmp;
 
 	if (n < 0)
