@@ -11,6 +11,7 @@ void print_number(int n)
 	int base;
 	int status = 0;
 	int tmp;
+	
 	float base1 = 0.1;
 	
 	if (n < 0)
