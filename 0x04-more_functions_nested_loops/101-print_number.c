@@ -9,7 +9,8 @@
 void print_number(int n)
 {
 	int count = 0;
-	int base = 1;
+	float base1 = 0.1;
+	int base;
 	int tmp;
 
 	if (n < 0)
@@ -27,9 +28,9 @@ void print_number(int n)
 		{
 			tmp = tmp / 10;
 			count++;
-			base = base * 10;
+			base1 = base1 * 10;
 		}
-		base = base / 10;
+		base = (int) base1;
 		while (count > 0)
 		{
 			_putchar('0' + (n / base));
