@@ -34,7 +34,7 @@ void print_number(int n)
 			count++;
 			base1 = base1 * 10;
 		}
-		base = (int)base1;
+		base = (int) base1;
 		while (count > 0)
 		{
 			if (count == 1 && status == 1)
