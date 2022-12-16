@@ -14,11 +14,11 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n != -2147483648)
-			n = -1 * n;
+		if (n != - 2147483648)
+			n = - 1 * n;
 		else
 		{
-			n = -1 * (n + 1);
+			n = - 1 * (n + 1);
 			status = 1;
 		}
 	}
