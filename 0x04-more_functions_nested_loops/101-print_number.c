@@ -23,7 +23,7 @@ void print_number(int n)
 	{
 		while (tmp > 0)
 		{
-			tmp = tmp % 10;
+			tmp = tmp / 10;
 			count++;
 			base = base * 10;
 		}
