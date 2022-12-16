@@ -10,13 +10,19 @@ void print_number(int n)
 {
 	int count = 0;
 	float base1 = 0.1;
-	int base;
+	int base,status = 0;
 	int tmp;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -1 * n;
+		if (n != INT_MIN)
+			n = -1 * n;
+		else
+		{
+			n = -1 * (n + 1);
+			status = 1;
+		}
 	}
 
 	if (n <= 9)
@@ -33,7 +39,12 @@ void print_number(int n)
 		base = (int) base1;
 		while (count > 0)
 		{
-			_putchar('0' + (n / base));
+			if ( count == 1 && status == 1)
+			{
+				_putchar('1' + (n / base));
+			}
+			else
+				_putchar('0' + (n / base));
 			n = n % base;
 			base = base / 10;
 			count--;
