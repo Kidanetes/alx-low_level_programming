@@ -9,7 +9,6 @@ void print_number(int n)
 {
 	int count = 0, base, status = 0;
 	int tmp;
-
 	float base1 = 0.1;
 
 	if (n < 0)
@@ -40,7 +39,7 @@ void print_number(int n)
 		{
 			if (count == 1 && status == 1)
 			{
-				_putchar('1' + (n / base));
+				_putchar('0' + (n / base + 1));
 			}
 			else
 				_putchar('0' + (n / base));
