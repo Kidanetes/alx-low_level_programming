@@ -10,7 +10,7 @@ void print_number(int n)
 {
 	int count = 0;
 	int base = 1;
-	int tmp = n;
+	int tmp;
 
 	if (n < 0)
 	{
@@ -22,6 +22,7 @@ void print_number(int n)
 		_putchar('0' + n);
 	else
 	{
+		tmp = n;
 		while (tmp > 0)
 		{
 			tmp = tmp / 10;
