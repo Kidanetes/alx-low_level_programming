@@ -10,13 +10,13 @@ void print_number(int n)
 {
 	int count = 0;
 	float base1 = 0.1;
-	int base,status = 0;
+	int base, status = 0;
 	int tmp;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		if (n != (-2147483647 - 1))
+		if (n != -2147483648)
 			n = -1 * n;
 		else
 		{
