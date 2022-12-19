@@ -11,7 +11,7 @@ void rev_string(char *s)
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
 	}
-	const length = i;
+	const int length = i;
 	char a[length];
 	for (i = 0; i < length; i++)
 	{
