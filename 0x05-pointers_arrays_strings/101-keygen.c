@@ -16,7 +16,7 @@ int main(void)
 	while (i < 10)
 	{
 		password[i] = 32 + rand() % 133;
-		i--;
+		i++;
 	}
 	return (0);
 }
