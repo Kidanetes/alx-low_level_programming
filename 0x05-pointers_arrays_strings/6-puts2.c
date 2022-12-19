@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts2 - prints a every other caracter of
+ * puts2 - prints a every other caracter of
  * a string
  * @str: input parameter
  * Return: void
