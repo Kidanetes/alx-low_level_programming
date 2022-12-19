@@ -9,10 +9,10 @@
 int main(void)
 {
 	time_t t;
-	srand((int) time(&t));
 	char password[10];
 	int i = 0;
-
+	
+	srand((int) time(&t));
 	while (i < 10)
 	{
 		password[i] = 32 + rand() % 133;
