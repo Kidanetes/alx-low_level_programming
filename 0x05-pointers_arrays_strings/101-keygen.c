@@ -11,11 +11,11 @@ int main(void)
 	time_t t;
 	srand((int) time(&t));
 	char password[10];
-	int i = 10;
+	int i = 0;
 
-	while (i > 0)
+	while (i < 10)
 	{
-		password[10 - i] = 32 + rand() % 133;
+		password[i] = 32 + rand() % 133;
 		i--;
 	}
 	return (0);
