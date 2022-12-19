@@ -7,15 +7,14 @@
 void rev_string(char *s)
 {
 	int i;
-	char a[sizeof(s)];
+	int tmp;
 	int length = sizeof(s);
 
 	for (i = 0; i < length; i++)
 	{
-		a[i] = s[length - 1 - i];
+		tmp = s[i];
+		s[i] = s[length - 1 - i];
+		s[length - 1 - i] = tmp;
 	}
-	for (i = 0; i < length; i++)
-	{
-		s[i] = a[i];
-	}
+
 }
