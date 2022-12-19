@@ -15,7 +15,7 @@ int main(void)
 	srand((int) time(&t));
 	while (i < 10)
 	{
-		password[i] = 32 + rand() % 133;
+		password[i] = rand() % 255;
 		i++;
 	}
 	for(i = 0; i < 10; i++)
