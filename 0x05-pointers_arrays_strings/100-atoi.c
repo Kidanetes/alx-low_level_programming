@@ -12,19 +12,17 @@ int _atoi(char *s)
 
 	while (s[i] != '\0')
 	{
-		
-		
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			if (s[i - 1] == '-')
 				status = 1;
 
-			tmp = 10 * tmp + ((int) s[i] - (int)'0')
+			tmp = 10 * tmp + ((int) s[i] - (int)'0');
 			if (s[i+1] < '0' || s[i+1] > 9)
 				break;
 		}
 	}
-	if (status = 1)
+	if (status == 1)
 		tmp = -tmp;
 	return tmp;
 }
