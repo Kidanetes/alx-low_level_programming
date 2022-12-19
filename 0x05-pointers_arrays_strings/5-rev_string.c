@@ -7,9 +7,10 @@
 void rev_string(char *s)
 {
 	int i;
-	char a[_strlen(s)];
+	const int length = _strlen(s); 
+	char a[length];
 	
-	for (i = 0; i < _strlen(s); i++)
+	for (i = 0; i < length; i++)
 	{
 		a[i] = *(s + (length - 1 - i));
 	}
