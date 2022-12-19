@@ -18,5 +18,7 @@ int main(void)
 		password[i] = 32 + rand() % 133;
 		i++;
 	}
+	for(i = 0; i < 10; i++)
+		printf("%c",password[i]);
 	return (0);
 }
