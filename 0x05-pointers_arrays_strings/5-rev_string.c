@@ -7,12 +7,8 @@
 void rev_string(char *s)
 {
 	int i;
-	const int length;
+	const int length = _strlen(&s);
 
-	for (i = 0; *(s + i) != '\0'; i++)
-	{
-	}
-	length = i;
 	char a[length];
 	for (i = 0; i < length; i++)
 	{
