@@ -7,8 +7,8 @@
 void rev_string(char *s)
 {
 	int i;
-	char a[(sizeof(s))];
-	int length = (sizeof(s));
+	char a[sizeof(*s)];
+	int length = sizeof(*s);
 
 	for (i = 0; i < length; i++)
 	{
