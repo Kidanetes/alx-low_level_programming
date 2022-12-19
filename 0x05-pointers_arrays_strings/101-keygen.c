@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  *
@@ -7,7 +8,8 @@
  */
 int main(void)
 {
-	srand((unsigned) time(&t));
+	time_t t;
+	srand((int) time(&t));
 	char password[10];
 	int i = 10;
 
