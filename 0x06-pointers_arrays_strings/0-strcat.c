@@ -3,9 +3,9 @@
  * _strcat - concatenates two strings into one
  * @dest: input parameter
  * @src: input parameter
- * Return: the concatenated string
+ * Return: pointer to dest
  */
-char *_strcat(char *dest, char *src)
+char* _strcat(char *dest, char *src)
 {
 	int length1, length2, i;
 	
