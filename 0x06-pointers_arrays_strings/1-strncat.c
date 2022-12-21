@@ -4,7 +4,7 @@
  * @dest: input parameter
  * @src: input parameter
  * @n: input parameter
- * return: the concatenated string
+ * Return: the concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
 {
