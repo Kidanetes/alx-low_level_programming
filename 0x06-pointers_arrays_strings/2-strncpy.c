@@ -19,7 +19,7 @@
 	{
 		n = length;
 	}
-	src = start;
+	*src = start;
 	for (j = 0; j < n; j++)
 		dest[j] = src[j];
 
