@@ -35,14 +35,14 @@ void print_number(int n)
 		while (tmp > 0)
 		{
 			tmp = tmp / 10;
-			number_digits++;
+			number_digts++;
 			weight_ = weight * 10.0;
 		}
 		weight = (int) weight_;
 
-		while (number_digits > 0)
+		while (number_digts > 0)
 		{
-			if ((number_digits == 1) && (status == 1))
+			if ((number_digts == 1) && (status == 1))
 			{
 				_putchar('0' + (n / weight + 1));
 			}
@@ -52,7 +52,7 @@ void print_number(int n)
 			}
 			n = n % weight;
 			weight = weight / 10;
-			number_digits--;
+			number_digts--;
 		}
 	}
 }
