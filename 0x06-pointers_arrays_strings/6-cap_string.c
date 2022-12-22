@@ -6,7 +6,7 @@
  */
 char *cap_string(char *)
 {
-	int i = 0, status;
+	int i = 0, j, status;
 	char str[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(',')', '{', '}', '\0'};
 
 	while (s[i])
@@ -14,15 +14,16 @@ char *cap_string(char *)
 		if (s[i] >= 'a' && s[i] <= 'z')
 		{
 			status = 0;
-			while (*str != '\0' && i != 0)
+			j = 0;
+			while (str[j] != '\0' && i != 0)
 			{
-				if (s[i - 1] == *str)
+				if (s[i - 1] == str[j])
 				{
 					status = 1;
-					*str++;
+					j++;
 					break;
 				}
-				*str++;
+				j++;
 			}
 			if (status == 1 || i == 0)
 				s[i] = s[i] + ('A' - 'a');
