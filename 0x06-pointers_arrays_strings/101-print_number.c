@@ -36,7 +36,7 @@ void print_number(int n)
 		{
 			tmp = tmp / 10;
 			number_digts++;
-			weight_ = weight * 10.0;
+			weight_ = weight_ * 10.0;
 		}
 		weight = (int) weight_;
 
@@ -56,6 +56,3 @@ void print_number(int n)
 		}
 	}
 }
-
-
-
