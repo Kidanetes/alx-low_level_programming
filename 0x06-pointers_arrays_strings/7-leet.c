@@ -17,7 +17,7 @@ char *leet(char *s)
 		{
 			if (s[i] == str[j] || s[i] == str[j] + dif)
 			{
-				s[i] = code[j];
+				s[i] = '0' + code[j];
 				break;
 			}
 			j++;
