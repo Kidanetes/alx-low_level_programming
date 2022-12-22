@@ -30,11 +30,7 @@
 			*dest++;
 			*src++;
 		}
-		while (*dest != '\0')
-		{
-			*dest = '\0';
-			*dest++;
-		}
+		*dest = *src;
 	}
 	
 	return (dest);
