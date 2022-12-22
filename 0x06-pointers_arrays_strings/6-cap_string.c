@@ -19,6 +19,7 @@ char *cap_string(char *)
 				if (s[i - 1] == *str)
 				{
 					status = 1;
+					*str++;
 					break;
 				}
 				*str++;
