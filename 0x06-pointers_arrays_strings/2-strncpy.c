@@ -15,7 +15,7 @@
 	}
 	length = i;
 
-	if (n < length)
+	if (n > length)
 	{
 		n = length;
 	}
