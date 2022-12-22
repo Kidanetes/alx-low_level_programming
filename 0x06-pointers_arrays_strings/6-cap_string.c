@@ -4,7 +4,7 @@
  * @s: input parameter
  * Return: string
  */
-char *cap_string(char *)
+char *cap_string(char *s)
 {
 	int i = 0, j, status;
 	char str[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125, '\0'};
