@@ -12,19 +12,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int i = 0, j = 0, length1, length2;
 	int res = 0;
 	
-	while (n1[i])
+	while (n1[i] != '\0')
 	{
 		i++;
 	}
 	length1 = i;
-	while (n2[j])
+	while (n2[j] != '\0')
 	{
 		j++;
 	}
 	length2 = j;
 	if (size_r < length1 && size_r < length2)
 	{
-		r = '0';
+		r[j] = '0';
 		j++
 	}
 	else
