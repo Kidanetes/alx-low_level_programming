@@ -6,12 +6,14 @@
  * @n: input parameter
  * Return: the copied string
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i, j, length;
 
 	for (i = 0; src[i]; i++)
 	{
+
 	}
 	length = ++i;
 	if (n > length)
