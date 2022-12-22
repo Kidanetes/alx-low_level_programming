@@ -26,15 +26,22 @@ void print_number(int n)
 			status = 1;
 		}
 	}
-	printLnumbers(n);
+	printLnumbers(n, status);
 }
 /**
  * printLnumbers - print large numbers
  * @n: input parameter
+ * @s: input parameter
  * Return: void
  */
-void printLnumbers(int n)
+void printLnumbers(int n, int s)
 {
+	int count = 0;
+	int base;
+	int tmp;
+
+	float base1 = 0.1;
+
 	if (n <= 9)
 	{
 		_putchar('0' + n);
@@ -52,7 +59,7 @@ void printLnumbers(int n)
 
 		while (count > 0)
 		{
-			if ((count == 1) && (status == 1))
+			if ((count == 1) && (s == 1))
 			{
 				_putchar('0' + (n / base + 1));
 			}
