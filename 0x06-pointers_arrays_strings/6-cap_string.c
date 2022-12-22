@@ -1,5 +1,6 @@
 #include "main.h"
-/** cap_string - capitalize every word of
+/**
+ * cap_string - capitalize every word of
  * a string
  * @s: input parameter
  * Return: string
@@ -32,8 +33,3 @@ char *cap_string(char *s)
 	}
 	return (s);
 }
-
-
-
-		
-			
