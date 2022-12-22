@@ -6,37 +6,20 @@
  * @n: input parameter
  * Return: the copied string
  */
- char *_strncpy(char *dest, char *src, int n)
- {
-	 int i,j,length;
-
-	 for (i = 0; *src != '\0'; *src++,i++)
-	 {
-	 }
-	 length = i;
-
-	if (n < length)
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i, j, length;
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		for (j = 0; j < n; j++)
-		{
-			dest[j] = src[j];
-		}
 	}
-	else
+	length = ++i;
+	if (n > length)
 	{
-		while (*src != '\0')
-		{
-			*dest = *src;
-			*dest++;
-			*src++;
-		}
-		while (*dest != '\0')
-		{
-			*dest = '\0';
-			*dest++;
-		}
+		for (i = length; i < n; i++)
+			dest[i] = '\0';
+		n = length;
 	}
-	
+	for (j = 0; j < n; j++)
+		dest[j] = src[j];
 	return (dest);
- }
-   
+}
