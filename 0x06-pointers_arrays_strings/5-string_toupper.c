@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * string_toupper - changes the letterse of 
+ * string_toupper - changes the letter of
  * a string to uppercase letter
  * @s: input parameter
  * Return: String
