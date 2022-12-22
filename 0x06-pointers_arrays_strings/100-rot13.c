@@ -12,7 +12,7 @@ char *rot13(char *s)
 	while (s[i])
 	{
 		j = 0;
-		while ((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z') && j < 1)
+		while (((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= 'a' && s[i] <= 'z')) && j < 1)
 		{
 			if ((s[i] >= 'A' && s[i] <= 'M') || (s[i] >= 'a' && s[i] <= 'm'))
 			{
