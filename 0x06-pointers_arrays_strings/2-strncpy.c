@@ -17,21 +17,10 @@
 
 	if (n < length)
 	{
-		for (j = 0; j < n; j++)
-		{
-			dest[j] = src[j];
-		}
+		n = length;
 	}
-	else
-	{
-		while (*src != '\0')
-		{
-			*dest = *src;
-			*dest++;
-			*src++;
-		}
-		*dest = *src;
-	}
-	
+	for (j = 0; j < n; j++)
+		dest[j] = src[j];
+
 	return (dest);
  }
