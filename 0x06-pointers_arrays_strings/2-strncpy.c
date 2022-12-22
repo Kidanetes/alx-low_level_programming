@@ -10,10 +10,10 @@
  {
 	int i, j ,length;
 
-	for (i = 1; src[i - 1] != '\0'; i++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
 	}
-	length = i;
+	length = i++;
 
 	if (n > length)
 	{
