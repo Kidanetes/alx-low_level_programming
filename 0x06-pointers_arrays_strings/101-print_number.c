@@ -26,6 +26,15 @@ void print_number(int n)
 			status = 1;
 		}
 	}
+	printLnumbers(n);
+}
+/**
+ * printLnumbers - print large numbers
+ * @n: input parameter
+ * Return: void
+ */
+void printLnumbers(int n)
+{
 	if (n <= 9)
 	{
 		_putchar('0' + n);
