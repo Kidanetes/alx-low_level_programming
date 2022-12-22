@@ -23,7 +23,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	length2 = j;
 	if (size_r < length1 && size_r < length2)
+	{
 		r = '0';
+		j++
+	}
 	else
 	{
 		j = 0;
