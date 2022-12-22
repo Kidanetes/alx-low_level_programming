@@ -13,12 +13,9 @@
 	for (i = 0; src[i] != '\0'; i++)
 	{
 	}
-	length = i;
+	length = i++;
 
-	if (n > length)
-	{
-		n = length;
-	}
+	
 	for (j = 0; j < n; j++)
 		dest[j] = src[j];
 
