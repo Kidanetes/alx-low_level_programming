@@ -10,6 +10,7 @@ void print_number(int n)
 	int weight;
 	int status = 0;
 	int tmp;
+
 	float weight_ = 0.1;
 
 	if (n < 0)
