@@ -22,7 +22,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	}
 	length2 = j;
-	if (size_r < length1 - 2 && size_r < length2 - 2)
+	if (size_r < length1 && size_r < length2)
 	{
 		return (0);
 	}
@@ -39,14 +39,18 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			{
 				n2[j] = '0';
 			}
-			
+
 			res = res + n1[j] - '0' + n2[j] - '0';
 			r[j] = (res % 10) + '0';
 			res = res / 10;
 			j++;
 		}
 		if (res != 0 && j < size_r)
+		{
 			r[j] = res + '0';
+			j++
+		}
+		r[j] = '\0';
 		if (size_r < j)
 			return (0);
 	}
