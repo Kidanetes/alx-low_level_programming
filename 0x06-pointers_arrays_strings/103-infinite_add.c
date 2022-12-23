@@ -45,9 +45,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		if (res != 0)
 			r[j] = res + '0';
-		else if (res != 0 && j > size_r)
-			return (0);
 	}
-	r[j] = '\0';
 	return (r);
 }
