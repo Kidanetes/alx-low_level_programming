@@ -11,7 +11,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i = 0, j = 0, length1, length2;
 	int res = 0;
-	char tmp;
 
 	while (n1[i] != '\0')
 	{
