@@ -39,7 +39,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			{
 				n2[j] = '0';
 			}
-
 			res = res + n1[j] - '0' + n2[j] - '0';
 			r[j] = (res % 10) + '0';
 			res = res / 10;
@@ -51,7 +50,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		{
 			r[j] = res + '0';
 		}
-
 	}
 	return (r);
 }
