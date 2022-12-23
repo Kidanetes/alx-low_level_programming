@@ -44,7 +44,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			res = res / 10;
 			j++;
 		}
-		if (size_r < j)
+		if (size_r - 1 < j)
 			return (0);
 		if (res != 0 && j < size_r)
 		{
