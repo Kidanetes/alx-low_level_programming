@@ -31,16 +31,10 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j = 0;
 		while (n1[j] != '\0' || n2[j] != '\0')
 		{
-			if (j >= length1 && j < length2)
-				r[j] = n2[j];
-			else if (j >= length2 && j < length1)
-				r[j] = n1[j];
-			else
-			{
 				res = res + n1[j] - '0' + n2[j] - '0';
 				r[j] = (res % 10) + '0';
 				res = res / 10;
-			}
+		}
 			j++;
 		}
 	}
