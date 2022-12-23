@@ -53,7 +53,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 	}
 	j = 0;
-	while (r[j] >= '0' ** r[j] <= 9)
+	while (r[j] >= '0' && r[j] <= 9)
 	{
 		j++;
 	}
