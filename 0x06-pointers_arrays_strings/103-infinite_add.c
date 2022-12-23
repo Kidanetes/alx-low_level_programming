@@ -50,13 +50,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (res != 0 && j < size_r)
 		{
 			r[j] = res + '0';
-			for(i = 0; i <= j; i++, j--)
-			{
-				tmp = r[i];
-				r[i] = r[j];
-				r[j] = tmp;
-			}		
-				
+		}
+		for(i = 0; i <= j; i++, j--)
+		{
+			tmp = r[i];
+			r[i] = r[j];
+			r[j] = tmp;
 		}
 	}
 	return (r);
