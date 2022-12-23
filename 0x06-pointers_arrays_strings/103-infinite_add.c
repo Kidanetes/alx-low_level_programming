@@ -22,7 +22,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j++;
 	}
 	length2 = j;
-	if (size_r < length1 && size_r < length2)
+	if (size_r < length1 - 1 && size_r < length2 -1)
 	{
 		return (0);
 	}
