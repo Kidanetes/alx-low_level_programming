@@ -52,11 +52,17 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[j] = res + '0';
 		}
 	}
+	j = 0;
+	while (r[j] >= '0' ** r[j] <= 9)
+	{
+		j++;
+	}
+	j--;
 	for (i = 0; i <= j; i++, j--)
-		{
-			tmp = r[i];
-			r[i] = r[j];
-			r[j] = tmp;
-		}
+	{
+		tmp = r[i];
+		r[i] = r[j];
+		r[j] = tmp;
+	}	
 	return (r);
 }
