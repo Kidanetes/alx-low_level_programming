@@ -7,7 +7,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *tmp1 = haystack, tmp2 = needle;
+	char *tmp1 = haystack, *tmp2 = needle;
 
 	while (*haystack)
 	{
