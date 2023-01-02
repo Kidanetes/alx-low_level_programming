@@ -29,6 +29,7 @@ unsigned int _strspn(char *s, char *accept)
                         if (j != 0)
                             i++;
                         break;
+                }
 		j++;
 	}
 	return (i);
