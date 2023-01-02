@@ -25,7 +25,10 @@ unsigned int _strspn(char *s, char *accept)
 			k++;
 		}
                 if (status == 0)
-                        return (i + 1);
+                {
+                        if (j != 0)
+                            i++;
+                        break;
 		j++;
 	}
 	return (i);
