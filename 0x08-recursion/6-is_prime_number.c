@@ -19,10 +19,8 @@ int is_prime_number(int n)
  */
 int prime(int n, int m)
 {
-	if (n <= 1 && n >= -1)
+	if (n <= 1)
 		return (0);
-	if (n < 0)
-		n = -n;
 	if (n % m == 0 && m < n)
 		return (0);
 	if (n == m)
