@@ -7,7 +7,12 @@
 void _print_rev_recursion(char *s)
 {
 	int status = 0;
-	char* start = s;
+	char *start = s;
+
+	if (*start == '\0')
+	{
+		return;
+	}
 
 	if (*s == '\0' && status == 0)
 	{
