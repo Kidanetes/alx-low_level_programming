@@ -13,7 +13,7 @@ void _print_rev_recursion(char *s)
 	{
 		status = 1;
 	}
-	if (status = 1 && *s >= *start)
+	if (status == 1 && *s >= *start)
 	{
 		_putchar(*s);
 		s--;
