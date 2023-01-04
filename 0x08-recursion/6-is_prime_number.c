@@ -23,9 +23,9 @@ int prime(int n, int m)
 		return (0);
 	if (n < 0)
 		n = -n;
-	if (n % m == 0 && n < m)
+	if (n % m == 0 && n <= m/2)
 		return (0);
-	if (n == m)
+	else
 		return (1);
 	return (prime(n, m + 1));
 }
