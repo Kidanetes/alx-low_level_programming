@@ -9,7 +9,7 @@ void _print_rev_recursion(char *s)
 	int status = 0;
 	char *start = s;
 
-	if (*start == '\0' || start < s)
+	if (*start == '\0')
 	{
 		return;
 	}
@@ -25,10 +25,18 @@ void _print_rev_recursion(char *s)
 		s--;
 		_print_rev_recursion(s);
 	}
-	else
+	else if (status == 1 && start != s) 
 	{
 		_putchar(*s);
 		s--;
 		_print_rev_recursion(s);
 	}
+	else if (status == 1 && start == s)
+	{
+		_putchar(*s);
+		*start == '\0';
+	}
+	else
+		return;
+		
 }
