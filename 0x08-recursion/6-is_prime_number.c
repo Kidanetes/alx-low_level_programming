@@ -23,7 +23,7 @@ int prime(int n, int m)
 		return (0);
 	if (n < 0)
 		n = -n;
-	if (n % m == 0 && n < m)
+	if (n % m == 0 && n > m)
 		return (0);
 	if (n == m)
 		return (1);
