@@ -16,15 +16,14 @@ int _sqrt_recursion(int n)
  */
 int sqrt_recursion(int n, int m)
 {
-	int x = n;
 	if (m == 0)
 	{
 		return (-1);
 	}
 	else
 	{
-		if (x * x == n)
-			return (x);
-		x = sqrt_recursion(n, m - 1);
+		if (m * m == n)
+			return (m);
+		 return (sqrt_recursion(n, m - 1));
 	}
 }
