@@ -23,7 +23,7 @@ void _print_rev_recursion(char *s)
 		final = s;
 		final--;
 	}
-	if (final != '\0')
+	if (*final != '\0' && final >= start)
 	{
 		_print_rev_recursion(s);
 		final--;
