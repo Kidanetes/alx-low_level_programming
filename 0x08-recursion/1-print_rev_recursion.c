@@ -9,11 +9,13 @@ void _print_rev_recursion(char *s)
 	int status = 0;
 	char* start = s;
 
-	if (*s == '\0' && status == 0)
+	if (*s == '\0')
 	{
 		status = 1;
+		s--;
+		_print_rev_recursion(s);
 	}
-	if (status == 1 && *s >= *start)
+	else if (status == 1 && *s >= *start)
 	{
 		_putchar(*s);
 		s--;
