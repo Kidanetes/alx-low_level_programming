@@ -34,7 +34,7 @@ void _print_rev_recursion(char *s)
 	else if (status == 1 && start == s)
 	{
 		_putchar(*s);
-		*start == '\0';
+		*start = '\0';
 	}
 	else
 		return;
