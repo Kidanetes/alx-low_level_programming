@@ -8,7 +8,7 @@
  */
 int is_prime_number(int n)
 {
-	return (prime(n, 2);
+	return (prime(n, 2));
 }
 /**
  * prime - checks wheter a numebr is pime or not
