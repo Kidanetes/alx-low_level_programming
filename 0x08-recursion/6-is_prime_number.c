@@ -27,5 +27,5 @@ int prime(int n, int m)
 		return (0);
 	if (n == m)
 		return (1);
-	return (prime(n, m + 1));
+	return (prime(n, ++m));
 }
