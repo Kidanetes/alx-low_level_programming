@@ -36,7 +36,7 @@ int palindrom(char *s, int index, int size)
 	}
 	if (s[index] == s[size])
 	{
-		return (palindrome(s, ++index, --size));
+		return (palindrom(s, ++index, --size));
 	}
 	return (0);
 }
