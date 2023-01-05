@@ -17,7 +17,7 @@ int is_palindrome(char *s)
 		return (1);
 	}
 	else
-		return palindrom(char s, x, y); 
+		return palindrom(char s, x, y - 1); 
 
 	
 }
