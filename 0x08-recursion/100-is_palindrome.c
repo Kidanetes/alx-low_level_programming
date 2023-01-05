@@ -17,11 +17,17 @@ int is_palindrome(char *s)
 		return (1);
 	}
 	else
-		return palindrom(char s, x, y - 1); 
+		return palindrom(s, x, y - 1); 
 
 	
 }
-
+/**
+ * palindrom - checks wheter a string is palindrom or not
+ * @s: input parameter
+ * @index: input parameter
+ * @size: input parameter
+ * Return: int
+ */
 int palindrom(char *s, int index, int size)
 {
 	if (index >= size)
