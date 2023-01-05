@@ -9,7 +9,7 @@ int wildcmp(char *s1, char *s2)
 {
 	int i = 0, j = 0;
 
-	if (s1[i] == '\0' || s2[j] == '\0')
+	if (s1[i] == '\0' && s2[j] == '\0')
 		return (1);
 	if (s1[i] == s2[j])
 	{
@@ -25,6 +25,9 @@ int wildcmp(char *s1, char *s2)
 			++j;
 			return (wildcmp(++s1, ++s2));
 		}
+		if (s1[i + 1] == '\0' && s2[i + 1] != '*')
+		{
+			return (0);
 		++i;
 		return (wildcmp(++s1, s2));
 	}
