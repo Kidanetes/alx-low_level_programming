@@ -1,0 +1,28 @@
+#include "main.h"
+/**
+ * wildcmp - compares twp strings
+ * @s1: input parameter 1
+ * @s: input parameter 2
+ * Return: int (0 or 1)
+ */
+int wildcmp(char *s1, char *s2)
+{
+	int i = 0, j = 0;
+
+	if (s1[i] == '\0' && s2[j] == '\0')
+		return (1);
+	if (s1[i] == s2[j])
+	{
+		return (wildcmp(++i, ++j));
+	}
+	if (s2[j] == '*')
+	{
+		if ((s1[i + 1] == s2[j + 1]) && s1[j] != '*')
+			return (wildcmp(++i, ++j));
+		return (wildcmp(++i,j));
+	}
+	return (0);
+}
+
+
+
