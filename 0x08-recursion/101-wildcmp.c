@@ -2,7 +2,7 @@
 /**
  * wildcmp - compares twp strings
  * @s1: input parameter 1
- * @s: input parameter 2
+ * @s2: input parameter 2
  * Return: int (0 or 1)
  */
 int wildcmp(char *s1, char *s2)
@@ -26,7 +26,7 @@ int wildcmp(char *s1, char *s2)
 			return (wildcmp(++s1, ++s2));
 		}
 		++i;
-		return (wildcmp(++s1,s2));
+		return (wildcmp(++s1, s2));
 	}
 	return (0);
 }
