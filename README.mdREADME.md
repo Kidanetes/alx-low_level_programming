@@ -1,1 +1,0 @@
-project about static libraries
