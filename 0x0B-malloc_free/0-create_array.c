@@ -21,4 +21,5 @@ char *create_array(unsigned int size, char c)
 		i++;
 	}
 	return (array);
+        return ('\0');
 }	
