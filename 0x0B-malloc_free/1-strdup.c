@@ -7,7 +7,7 @@
  */
 char *_strdup(char *str)
 {
-	int size, i = 1;
+	int size, i = 0;
 	char *array;
 
 	if (str == NULL)
@@ -16,7 +16,7 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	size = i;
+	size = i + 1;
 	array = malloc(size);
 	if (array == NULL)
 		return (NULL);
