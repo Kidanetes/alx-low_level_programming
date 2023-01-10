@@ -8,7 +8,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0, j = 0, size;
+	int i = 0, j = 0, size, k;
 	char *array;
 
 	for (; s1[i] != '\0'; i++)
@@ -18,15 +18,16 @@ char *str_concat(char *s1, char *s2)
 	{
 	}
 	size = i + j + 1;
+	k = i;
 	array = malloc(size);
 	if (array == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
 	{
-		if (i < j)
+		if (i < k)
 			array[i] = s1[i];
 		else
-			array[i] = s2[i - j];
+			array[i] = s2[i - k];
 	}
 	array[i] = '\0';
 	return (array);
