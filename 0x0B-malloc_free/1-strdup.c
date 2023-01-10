@@ -7,10 +7,14 @@
  */
 char *_strdup(char *str)
 {
-	int size = sizeof(str);
-	int i;
+	int size, i = 0;
 	char *array;
-
+	
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	size = i;
 	array = malloc(size);
 	if (str == NULL || array == NULL)
 		return (NULL);
