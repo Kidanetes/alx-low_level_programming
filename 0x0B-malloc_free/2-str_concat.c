@@ -24,15 +24,9 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < size; i++)
 	{
 		if (i < j)
-		{
-			if (s1[i] != '\0')
-				array[i] = s1[i];
-		}
+			array[i] = s1[i];
 		else
-		{
-			if (s2[i - j] != '\0')
-				array[i] = s2[i - j];
-		}
+			array[i] = s2[i - j];
 	}
 	array[i] = '\0';
 	return (array);
