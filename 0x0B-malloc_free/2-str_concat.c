@@ -15,10 +15,6 @@ char *str_concat(char *s1, char *s2)
 		;
 	for (; s2[j] != '\0'; j++)
 		;
-	if (s1 == NULL)
-		*s1 = '';
-	if (s2 == NULL)
-		*s2 = '';
 	size = i + j + 1;
 	k = i;
 	array = malloc(size);
