@@ -2,19 +2,20 @@
 #include <stdlib.h>
 /**
  * _strdup -  copy the string given as a parameter
- * @str - input parameter
+ * @str: input parameter
  * Return: pointer to copied string
  */
 char *_strdup(char *str)
 {
 	int size, i = 0;
 	char *array;
-	
+	char *start = str;
+
 	while (str[i] != '\0')
 	{
 		i++;
 	}
-	size = i;
+	size = i + 1;
 	array = malloc(size);
 	if (str == NULL || array == NULL)
 		return (NULL);
