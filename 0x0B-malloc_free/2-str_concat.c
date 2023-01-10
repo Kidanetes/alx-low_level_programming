@@ -25,12 +25,12 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (i < j)
 		{
-			if (s1[i] != '')
+			if (s1[i] != '\0')
 				array[i] = s1[i];
 		}
 		else
 		{
-			if (s2[i - j] != '')
+			if (s2[i - j] != '\0')
 				array[i] = s2[i - j];
 		}
 	}
