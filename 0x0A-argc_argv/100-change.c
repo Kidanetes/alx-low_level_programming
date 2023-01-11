@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, change, i = 0, j = 0;
+	int num, change, i = 0;
 	int cent[] = {25, 10, 5, 2, 1};
 
 	if (argc - 1 != 1)
@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
 	else
 	{
 		change = 0;
-		while (j < num)
+		while (num > 0)
 		{
-			if (num - j > cent[i])
+			if (num > cent[i])
 			{
-				j = num - cent[i];
+				num = num - cent[i];
 				change++;
 			}
 			else
@@ -38,6 +38,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", change);
 	return (0);
 }
-		
-
-
