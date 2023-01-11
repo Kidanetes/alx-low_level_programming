@@ -26,9 +26,9 @@ int main(int argc, char *argv[])
 		change = 0;
 		while (j < num)
 		{
-			if (num - j > a[i])
+			if (num - j > cent[i])
 			{
-				j = num - a[i];
+				j = num - cent[i];
 				change++;
 			}
 			else
