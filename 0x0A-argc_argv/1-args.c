@@ -6,7 +6,7 @@
  * @argv: input parameter
  * Return: int
  */
-int main(int argc, char *argv[])
+int main(int argc, char char __attribute__((__unused__)) *argv[])
 {
 	if (argv[0] != NULL)
 	{
