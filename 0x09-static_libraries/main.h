@@ -1,6 +1,5 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
-
 int _putchar(char);
 int _islower(int);
 int _isalpha(int);
