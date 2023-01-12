@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 0, j = 0;
-	int result;
+	unsigned long result;
 
 	if ((argc - 1) != 2)
 	{
