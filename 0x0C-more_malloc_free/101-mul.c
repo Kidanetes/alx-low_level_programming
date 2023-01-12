@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 0, j = 0;
-	long long result;
+	unsigned long result;
 
 	if ((argc - 1) != 2)
 	{
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		}
 		j++;
 	}
-	result = atoll(argv[1]) * atoll(argv[2]);
-	printf("%ll\n", result);
+	result = atol(argv[1]) * atol(argv[2]);
+	printf("%lu\n", result);
 	return (0);
 }
