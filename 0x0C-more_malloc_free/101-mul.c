@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	while (argv[2][j] != '\0')
 	{
-		if (argv[2][j] < '0' && argv[2][j] > '9')
+		if (argv[2][j] < '0' || argv[2][j] > '9')
 		{
 			printf("%s\n", "Error");
 			exit(98);
