@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int i = 0, j = 0;
-	int result;
+	unsigned long result;
 
 	if ((argc - 1) != 2)
 	{
@@ -27,15 +27,14 @@ int main(int argc, char *argv[])
 	}
 	while (argv[2][j] != '\0')
 	{
-		if (!(argv[2][j] >= '0' && argv[2][j] <= '9')) 
+		if (!(argv[2][j] >= '0' && argv[2][j] <= '9'))
 		{
 			printf("%s\n", "Error");
 			exit(98);
 		}
 		j++;
 	}
-	result = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", result);
+	result = atol(argv[1]) * atol(argv[2]);
+	printf("%ul\n", result);
 	return (0);
 }
-
