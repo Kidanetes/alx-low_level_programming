@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 		}
 		j++;
 	}
-	result = atoi(argv[1]) * atoi(argv[2]);
+	result = atol(argv[1]) * atol(argv[2]);
 	printf("%d\n", result);
 	return (0);
 }
