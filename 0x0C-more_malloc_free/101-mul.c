@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		j++;
 	}
 	result = atol(argv[1]) * atol(argv[2]);
-	printf("%d\n", result);
+	printf("%lu\n", result);
 	return (0);
 }
 
