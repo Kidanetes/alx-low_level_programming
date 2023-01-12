@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
  * main - Entry point
  * @argc: input paramter
