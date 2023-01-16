@@ -13,7 +13,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpyname, *cpyowner;
 	int i = 0, j = 0,  k;
 
-	if (name == NULL || owner == NULL || new_dog == NULL)
+	if (name == NULL && owner == NULL)
 		return (NULL);
 	while (name[i])
 		i++;
