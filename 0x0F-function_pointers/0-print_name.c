@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 /**
  * print_name - print a name
  * @name: input parameter 1
