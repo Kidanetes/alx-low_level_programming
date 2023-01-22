@@ -13,7 +13,6 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		status = 0;
 		switch (format[i])
 		{
 			case 'c': 
