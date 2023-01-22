@@ -1,6 +1,4 @@
 #include "variadic_functions.h"
-#include <stdio.h>
-#include <stdarg.h>
 /**
  * print_numbers - print numbers
  * @separator: imput parameter
@@ -16,7 +14,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	while (i < n)
 	{
 		printf("%d", va_arg(arg, int));
-		if (separator != NULL)
+		if (separator != NULL && i < n - 1)
 			printf("%s", separator);
 		i++
 	}
