@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include <stdlib.h>
 /**
  * get_op_func - get operator
  * @s: input parameter
@@ -15,12 +16,13 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 	int i;
-	
+
+	i = 0;
 	while (i < 5)
 	{
-		if (*(ops[i]).op == *s)
+		if (*(ops[i]).op == *s && *(s + 1) == '\0')
 			return (ops[i].f);
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
