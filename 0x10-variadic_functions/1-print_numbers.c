@@ -9,7 +9,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list arg;
-	
+
 	va_start(arg, n);
 	while (i < n)
 	{
@@ -21,5 +21,3 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	printf("\n");
 	va_end(arg);
 }
-
-
