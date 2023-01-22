@@ -10,7 +10,8 @@ void print_all(const char * const format, ...)
 	char *tmp;
 	int i = 0;
 	int status;
-
+	
+	va_start(arg, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		status = 0;
