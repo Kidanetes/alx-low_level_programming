@@ -8,11 +8,10 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	char *tmp;
-	int i = 0;
-	int status;
+	int i = 0, status;
 	
 	va_start(arg, format);
-	while (format != NULL && format[i] != '\0')
+	for (; format != NULL && format[i] != '\0'; i++)
 	{
 		status = 0;
 		switch (format[i])
@@ -38,14 +37,10 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				printf("%s", tmp);
-				break;
 		}
 		if (status == 1 && format[i + 1] != '\0')
 			printf(", ");
-		i++;
 	}
 	printf("\n");
 	va_end(arg);
 }
-
-
