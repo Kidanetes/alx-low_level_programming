@@ -8,7 +8,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	int j = 0;
+	unsigned int j = 0;
 
 	while (str[j] != '\0')
 		j++;
