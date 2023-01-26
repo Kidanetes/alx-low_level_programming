@@ -10,6 +10,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	unsigned int j = 0;
 	list_t *new;
 
+	if (str == NULL)
+		return (NULL);
 	while (str[j] != '\0')
 		j++;
 	new = malloc(sizeof(list_t));
