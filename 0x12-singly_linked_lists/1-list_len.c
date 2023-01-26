@@ -3,7 +3,7 @@
  * list_len - returns the number of nodes
  * @h: head node
  *
- * Retrun: number of nodes
+ * Return: number of nodes
  */
 size_t list_len(const list_t *h)
 {
