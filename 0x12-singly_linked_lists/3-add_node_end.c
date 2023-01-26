@@ -23,11 +23,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		(*new).len = j;
 		return (new);
 	}
-	while ( (*head).next != NULL)
+	while ( (**head).next != NULL)
 	{
-		*head = (*head).next;
+		*head = (**head).next;
 	}
-	new = (*head).next;
+	new = (**head).next;
 	(*new).str = strdup(str);
 	(*new).len = j;
 	(*new).next = NULL;
