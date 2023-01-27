@@ -24,12 +24,11 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	func_ptr = (unsigned char *)main;
-	i = 0;
 	if (n > 0)
 	{
 		for (i = 0; i < n; i++)
 		{
-			printf("%.2hhx", a[i]);
+			printf("%02hhx", a[i]);
 			if (i < n - 1)
 				printf(" ");
 		}
