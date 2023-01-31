@@ -21,10 +21,10 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (*head);
 	}
 	tmp2 = *head;
-	while (*tmp2 != NULL)
+	while ((*tmp2).next != NULL)
 		tmp2 = (*tmp2).next;
 	(*tmp).n = n;
-	tmp = (*tmp2).next;
+	(*tmp).next = tmp;
 	(*tmp).next = NULL;
 	return (*head);
 }
