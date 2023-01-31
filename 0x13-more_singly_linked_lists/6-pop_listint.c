@@ -15,8 +15,8 @@ int pop_listint(listint_t **head)
 		return (tmp);
 	}
 	tmp2 = *head;
-	free(head);
-	tmp = (*tmp2).n;
-	*head = (*tmp2).next;
+	tmp = (**head).n;
+	*head = (**head).next;
+	free(tmp2);
 	return (tmp);
 }
