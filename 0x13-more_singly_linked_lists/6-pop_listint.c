@@ -1,9 +1,9 @@
 #include "lists.h"
 /**
- * pop_listint - return number of nodes
+ * pop_listint - delete the head
  * @head: input parameter
  *
- * Return: number of node after deletion
+ * Return: value of the deleted node
  */
 int pop_listint(listint_t **head)
 {
