@@ -2,6 +2,7 @@
 /**
  * get_nodeint_at_index - find the node at index
  * @head: input parameter
+ * @index: input parameter
  *
  * Return: the address of the node at index n
  */
