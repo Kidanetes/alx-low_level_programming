@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * insert_nodeint_at_index - find the sum of all nodes
+ * insert_nodeint_at_index - insert new node at index
  * @head: input parameter
  * @idx: input parameter
  * @n: input parameter
@@ -12,7 +12,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int i = 0;
 
 	tmp = malloc(sizeof(listint_t));
-	if (tmp == NULL)
+	if (tmp == NULL || head == NULL)
 		return (NULL);
 	if (*head == NULL && idx == 0)
 	{
@@ -35,7 +35,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			(*tmp).n = n;
 			(*tmp).next = (*tmp2).next;
-			tmp = (*tmp2).next;
+			(*tmp2).next = tmp;
 			return (tmp);
 		}
 		i++;
