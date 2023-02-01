@@ -10,6 +10,8 @@ size_t print_listint_safe(const listint_t *head)
 	int num = 0;
 	long int diff;
 
+	if (head == NULL)
+		exit(98);
 	while (head)
 	{
 		diff = head - head->next;
