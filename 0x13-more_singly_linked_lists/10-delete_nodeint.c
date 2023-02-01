@@ -4,7 +4,7 @@
  * @head: node
  * @index: index of deleted node
  *
- * Return: 1 or 0 
+ * Return: 1 or 0
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
@@ -16,7 +16,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index == 0)
 	{
 		tmp = (**head).next;
-		free(head);
+		free(*head);
 		*head = tmp;
 		return (1);
 	}
