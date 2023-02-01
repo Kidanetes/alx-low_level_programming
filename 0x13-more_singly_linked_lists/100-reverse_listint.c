@@ -8,11 +8,13 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *tmp1, *tmp2;
-	
+
 	if (*head == NULL)
 		return (NULL);
 	tmp1 = *head;
-	while ((*tmp1).next != NULL)
+	if ((**head).next == NULL)
+		return (*head);
+	while (tmp1 != NULL)
 	{
 		tmp2 = tmp1->next;
 		tmp1->next = NULL;
