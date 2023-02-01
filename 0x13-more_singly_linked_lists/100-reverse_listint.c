@@ -14,10 +14,9 @@ listint_t *reverse_listint(listint_t **head)
 	tmp1 = *head;
 	if ((**head).next == NULL)
 		return (*head);
-	while ((*tmp1).next != NULL)
+	while ( != NULL)
 	{
 		tmp2 = tmp1->next;
-		tmp1->next = NULL;
 		tmp2->next = tmp1;
 		*head = tmp2;
 		tmp1 = tmp2;
