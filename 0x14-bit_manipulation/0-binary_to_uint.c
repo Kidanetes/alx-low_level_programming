@@ -24,7 +24,7 @@
 	 i = 0;
 	 while (base != 0)
 	 {
-		 sum = sum + b[i] * base;
+		 sum = sum + (b[i] - '0') * base;
 		 i++;
 		 base = base / 2;
 	 }
