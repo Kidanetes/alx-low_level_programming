@@ -20,7 +20,7 @@
 		 weight = weight * 2;
 		 i++;
 	 }
-	 base = (int) weight;
+	 base = (unsigned int) weight;
 	 i = 0;
 	 while (base != 0)
 	 {
