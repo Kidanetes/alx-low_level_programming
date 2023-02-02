@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * flip_bit - count numbe of bits to be filped
+ * flip_bits - count numbe of bits to be filped
  * @n: number
  * @m: number
  * Return: number of bits to fliped
