@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int i = 0;
 	unsigned long int base = 1;
-	int array[32];
+	int array[64];
 
 	if (n == 0)
 	{
@@ -35,7 +35,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		}
 		i--;
 	}
-	if (index > i)
+	if (index > i || index > 63)
 		return (-1);
 	return (array[i - index]);
 }
