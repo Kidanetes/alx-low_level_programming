@@ -8,7 +8,6 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int base = 1;
-	int i = 0;
 
 	while (base <= n)
 	{
