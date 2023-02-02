@@ -18,9 +18,8 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		i++;
 		if (i != 0)
-			weight = weight * 2;
+			base = base * 2;
 	}
-	base = (unsigned int) weight;
 	i = 0;
 	while (base != 0)
 	{
