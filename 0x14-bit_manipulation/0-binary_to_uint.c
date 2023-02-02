@@ -22,7 +22,7 @@
 	 }
 	 base = (int) weight;
 	 i = 0;
-	 while (wegiht != 0)
+	 while (base != 0)
 	 {
 		 sum = sum + b[i] * base;
 		 i++;
