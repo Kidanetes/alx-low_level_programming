@@ -13,12 +13,10 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	else
 	{
-		while (base <= n)
+		while (base <= (n >> 1))
 		{
 			base = base * 2;
 		}
-		if (base > n)
-			base = base >> 1;
 		while (base != 0)
 		{
 			if (n >= base)
