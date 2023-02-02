@@ -16,16 +16,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		if (i != 0)
-			base = base * 2;
+		sum = sum * 2 + (b[i] - '0')	
 		i++;
-	}
-	i = 0;
-	while (base != 0)
-	{
-		sum = sum + (b[i] - '0') * base;
-		i++;
-		base = base / 2;
 	}
 	return (sum);
 }
