@@ -17,7 +17,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	}
 	else
 	{
-		while (base <= (n >> 1))
+		while (base <= (*n >> 1))
 		{
 			base = base * 2;
 		}
