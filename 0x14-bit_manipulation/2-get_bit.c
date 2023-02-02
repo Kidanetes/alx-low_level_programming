@@ -37,5 +37,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index > 63)
 		return (-1);
+	if (index > i)
+		return (0);
 	return (array[i - index]);
 }
