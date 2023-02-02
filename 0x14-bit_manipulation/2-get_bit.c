@@ -14,7 +14,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	if (n == 0)
 	{
 		array[0] = 0;
-		i++;
 	}
 	else
 	{
@@ -35,8 +34,8 @@ int get_bit(unsigned long int n, unsigned int index)
 			i++;
 		}
 	}
-	if (index > i - 1)
+	i--;
+	if (index > i || index < 0)
 		return (-1);
 	return (array[index]);
 }
-  
