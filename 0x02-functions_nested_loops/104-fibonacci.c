@@ -12,7 +12,7 @@ int main(void)
 
 	while (count < 99)
 	{
-		if (now <= 1000000000000)
+		if (count <= 93)
 		{
 			tmp =  now;
 			now = now + prev;
