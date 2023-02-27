@@ -7,8 +7,8 @@
 
 int main(void)
 {
-        unsigned long int number = 612852475143;
-	unsigned long int count = number / 2, count2, max = 612852475143;
+        unsigned long number = 612852475143;
+	unsigned long count = number / 2, count2, max = 612852475143;
 	int status;
 
 	while (count >= 2)
