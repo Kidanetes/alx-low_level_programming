@@ -10,9 +10,9 @@ int main(void)
 	int count = 0, status = 0;
 	unsigned long now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
 
-	while (count < 99)
+	while (count < 98)
 	{
-		if (count <= 93)
+		if (count <= 91)
 		{
 			tmp =  now;
 			now = now + prev;
@@ -30,7 +30,7 @@ int main(void)
 				now2 = now % 1000000000000;
 			}
 			printf("%lu", now1 + (now2 / 1000000000000));
-			if (count < 98)
+			if (count < 97)
 				printf("%lu, ", now2 % 1000000000000);
 			else
 				printf("%lu\n", now2 % 1000000000000);
