@@ -40,8 +40,8 @@ void print_number(int n)
  */
 void printl(int n, int status)
 {
-	float base = 0.1;
-	int tmp, base1, count = 0;
+	float base1 = 0.1;
+	int tmp, base, count = 0;
 	
 	tmp = n;
 	while (tmp > 0)
