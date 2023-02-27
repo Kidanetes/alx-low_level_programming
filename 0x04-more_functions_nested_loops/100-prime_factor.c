@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<math.h>
 /**
  * main - entry point
  *
@@ -8,29 +9,14 @@
 int main(void)
 {
 	unsigned long number = 612852475143;
-	unsigned long count = 3, count2, max = 2;
-	int status;
+	unsigned long count = 3, count2;
+	unsigned long num = (int) sqrt(number);
 
-	while (count <= number)
+	for (; count <= num; count++)
 	{
-		if (number % count == 0)
-		{
-			status = 0;
-			count2 = 2;
-			while (count2 < count)
-			{
-				if (count % count2 == 0)
-				{
-					status = 1;
-					break;
-				}
-				count2++;
-			}
-			if (status == 0)
-				max = count;
-		}
-		count++;
+		while (number % count == 0 && number != count)
+			number /= count;
 	}
-	       printf("%lu\n", max);
+	       printf("%lu\n", number );
 	return (0);
 }
