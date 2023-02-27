@@ -7,11 +7,12 @@
 int main(void)
 {
 	unsigned long now = 1, prev = 0, tmp;
-	int count = 0, now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
+	int count = 0;
+	unsigned long now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
 
 	while (count < 98)
 	{
-		if (now <= sizeof(unsinged long))
+		if (now <= sizeof(unsigned long))
 		{
 			tmp =  now;
 			now = now + prev;
