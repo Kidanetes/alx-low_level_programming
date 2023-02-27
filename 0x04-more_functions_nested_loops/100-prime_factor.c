@@ -7,7 +7,7 @@
 
 int main(void)
 {
-        unsigned long number = 612852475143;
+	unsigned long number = 612852475143;
 	unsigned long count = number / 2, count2, max = 612852475143;
 	int status;
 
