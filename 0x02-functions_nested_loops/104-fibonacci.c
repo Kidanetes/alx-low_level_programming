@@ -12,7 +12,7 @@ int main(void)
 
 	while (count < 98)
 	{
-		if (now <= sizeof(unsigned long))
+		if (now <= 1000000000)
 		{
 			tmp =  now;
 			now = now + prev;
