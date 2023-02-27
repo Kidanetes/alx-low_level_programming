@@ -7,12 +7,7 @@
  */
 void print_number(int n)
 {
-	int count = 0;
-	int base;
-	int status = 0;
-	int tmp;
-
-	float base1 = 0.1;
+	int count = 0, status = 0;
 
 	if (n < 0)
 	{
