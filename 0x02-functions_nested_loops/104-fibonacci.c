@@ -6,9 +6,8 @@
  */
 int main(void)
 {
-	unsigned long now = 1, prev = 0, tmp;
 	int count = 0, status = 0;
-	unsigned long now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
+	unsigned long now = 1, prev = 0, tmp, now1, now2, prev1, prev2;
 
 	while (count < 98)
 	{
@@ -24,6 +23,7 @@ int main(void)
 		{
 			if (status == 0)
 			{
+				now = now + prev;
 				prev1 = prev / 1000000000000;
 				prev2 = prev % 1000000000000;
 				now1 = now / 1000000000000;
