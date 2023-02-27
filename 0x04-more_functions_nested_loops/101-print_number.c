@@ -28,7 +28,7 @@ void print_number(int n)
 	}
 	else
 	{
-		printl(n, status);	
+		printl(n, status);
 	}
 }
 /**
