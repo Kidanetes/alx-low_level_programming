@@ -33,28 +33,41 @@ void print_number(int n)
 	}
 	else
 	{
-		tmp = n;
-		while (tmp > 0)
+		printl(n, count, status);	
+	}
+}
+/**
+ * printl - print large numbers
+ * @n: input parameter
+ * @count: input parameter
+ * @status: input parameter
+ * Return: nothing
+ */
+void printl(int n, int count, int status)
+{
+	float base = 0.1;
+	int tmp, base;
+	
+	tmp = n;
+	while (tmp > 0)
+	{
+		tmp = tmp / 10;
+		count++;
+		base1 = base1 * 10.0;
+	}
+	base = (int) base1;
+	while (count > 0)
+	{
+		if ((count == 1) && (status == 1))
 		{
-			tmp = tmp / 10;
-			count++;
-			base1 = base1 * 10.0;
+			_putchar('0' + (n / base + 1));
 		}
-		base = (int) base1;
-
-		while (count > 0)
+		else
 		{
-			if ((count == 1) && (status == 1))
-			{
-				_putchar('0' + (n / base + 1));
-			}
-			else
-			{
-				_putchar('0' + (n / base));
-			}
-			n = n % base;
-			base = base / 10;
-			count--;
+			_putchar('0' + (n / base));
 		}
+		n = n % base;
+		base = base / 10;
+		count--;
 	}
 }
