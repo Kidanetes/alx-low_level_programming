@@ -1,5 +1,5 @@
 #include "main.h"
-printl(int n, int count, int status);
+void printl(int n, int count, int status);
 /**
  * print_number - print a number
  * only using _putchar
