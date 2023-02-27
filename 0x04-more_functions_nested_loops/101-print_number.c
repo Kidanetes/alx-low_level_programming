@@ -1,5 +1,4 @@
 #include "main.h"
-void printl(int n, int count, int status);
 /**
  * print_number - print a number
  * only using _putchar
@@ -8,7 +7,7 @@ void printl(int n, int count, int status);
  */
 void print_number(int n)
 {
-	int count = 0, status = 0;
+	int status = 0;
 
 	if (n < 0)
 	{
@@ -29,7 +28,7 @@ void print_number(int n)
 	}
 	else
 	{
-		printl(n, count, status);	
+		printl(n, status);	
 	}
 }
 /**
@@ -39,10 +38,10 @@ void print_number(int n)
  * @status: input parameter
  * Return: nothing
  */
-void printl(int n, int count, int status)
+void printl(int n, int status)
 {
 	float base = 0.1;
-	int tmp, base;
+	int tmp, base1, count = 0;
 	
 	tmp = n;
 	while (tmp > 0)
