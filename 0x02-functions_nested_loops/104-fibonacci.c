@@ -16,7 +16,7 @@ int main(void)
 		if (count < 97)
 			printf("%lu, ", now);
 		else
-			printf("%lu", now);
+			printf("%lu\n", now);
 		prev = tmp;
 		count++;
 	}
