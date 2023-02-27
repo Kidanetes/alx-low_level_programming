@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int count = 0, status = 0;
-	unsigned long tmp, now1 = 0, now2 = 1, prev1 = 0, prev2 = 0;
+	int count = 0;
+	unsigned long now1 = 0, now2 = 1, prev1 = 0, prev2 = 0;
 
 	while (count < 98)
 	{
@@ -22,8 +22,6 @@ int main(void)
 			else
 				printf("%lu\n", now2 % 1000000000000);
 			count++;
-		}
 	}
-
 	return (0);
 }
