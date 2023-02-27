@@ -11,3 +11,4 @@ void print_square(int size);
 void print_triangle(int size);
 int check_prime(unsigned long int n);
 void print_number(int n);
+void printl(int n, int count, int status);
