@@ -8,7 +8,7 @@
 int main(void)
 {
 	unsigned long number = 612852475143;
-	unsigned long count = 2, count2, max = 612852475143;
+	unsigned long count = 3, count2, max = 2;
 	int status;
 
 	while (count <= number)
@@ -17,7 +17,7 @@ int main(void)
 		{
 			status = 0;
 			count2 = 2;
-			while (count2 <= count)
+			while (count2 < count)
 			{
 				if (count % count2 == 0)
 				{
