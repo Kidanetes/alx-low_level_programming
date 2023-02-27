@@ -34,7 +34,6 @@ void print_number(int n)
 /**
  * printl - print large numbers
  * @n: input parameter
- * @count: input parameter
  * @status: input parameter
  * Return: nothing
  */
@@ -42,7 +41,7 @@ void printl(int n, int status)
 {
 	float base1 = 0.1;
 	int tmp, base, count = 0;
-	
+
 	tmp = n;
 	while (tmp > 0)
 	{
