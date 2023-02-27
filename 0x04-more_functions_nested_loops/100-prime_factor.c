@@ -8,10 +8,10 @@
 int main(void)
 {
 	unsigned long number = 612852475143;
-	unsigned long count = number / 2, count2, max = 612852475143;
+	unsigned long count = 2, count2, max = 612852475143;
 	int status;
 
-	while (count >= 2)
+	while (count <= number / 2)
 	{
 		if (number % count == 0)
 		{
@@ -29,7 +29,7 @@ int main(void)
 			if (status == 0)
 				max = count;
 		}
-		count--;
+		count++;
 	}
 	       printf("%lu\n", max);
 	return (0);
