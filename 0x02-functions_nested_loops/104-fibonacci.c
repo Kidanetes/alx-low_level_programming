@@ -9,7 +9,7 @@ int main(void)
 	unsigned long now = 1, prev = 0, tmp;
 	int count = 0;
 
-	while (count < 98)
+	while (count < 95)
 	{
 		tmp =  now;
 		now = now + prev;
