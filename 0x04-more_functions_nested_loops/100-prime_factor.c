@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long number = 612852475143;
-	unsigned long count = 3, count2;
+	unsigned long count = 3;
 	unsigned long num = (int) sqrt(number);
 
 	for (; count <= num; count++)
@@ -17,6 +17,6 @@ int main(void)
 		while (number % count == 0 && number != count)
 			number /= count;
 	}
-	       printf("%lu\n", number );
+	       printf("%lu\n", number);
 	return (0);
 }
