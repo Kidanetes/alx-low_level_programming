@@ -1,47 +1,37 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- *
- * Return: 0;
+ * main - finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by a new line
+ * Return: ALways 0 (Success)
  */
 int main(void)
 {
-	unsigned long now = 1, prev = 0, tmp;
-	int count = 0, status = 0;
-	unsigned long now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	while (count < 99)
+	j = 1;
+	k = 2;
+	printf("%lu", j);
+	for (i = 1; i < 91; i++)
 	{
-		if (now <= 1000000000000)
-		{
-			tmp =  now;
-			now = now + prev;
-			printf("%lu, ", now);
-			prev = tmp;
-			count++;
-		}
-		else
-		{
-			if (status == 0)
-			{
-				prev1 = prev / 1000000000000;
-				prev2 = prev % 1000000000000;
-				now1 = now / 1000000000000;
-				now2 = now % 1000000000000;
-			}
-			printf("%lu", now1 + (now2 / 1000000000000));
-			if (count < 98)
-				printf("%lu, ", now2 % 1000000000000);
-			else
-				printf("%lu\n", now2 % 1000000000000);
-			now1 = now1 + prev1;
-			prev1 = now1 - prev1;
-			now2 = now2 + prev2;
-			prev2 = now2 - prev2;
-			status = 1;
-			count++;
-		}
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
-
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+	for (i = 92; i < 99; ++i)
+	{
+	printf(", %lu", k1 + (k2 / 1000000000));
+	printf("%lu", k2 % 1000000000);
+	k1 = k1 + j1;
+	j1 = k1 - j1;
+	k2 = k2 + j2;
+	j2 = k2 - j2;
+	}
+	printf("\n");
 	return (0);
 }
