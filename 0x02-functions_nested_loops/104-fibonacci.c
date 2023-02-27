@@ -9,11 +9,11 @@ int main(void)
 	unsigned long now = 1, prev = 0, tmp;
 	int count = 0;
 
-	while (count < 96)
+	while (count < 98)
 	{
 		tmp =  now;
 		now = now + prev;
-		if (count < 95)
+		if (count < 97)
 			printf("%lu, ", now);
 		else
 			printf("%lu", now);
