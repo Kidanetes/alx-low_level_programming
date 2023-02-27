@@ -11,7 +11,7 @@ int main(void)
 	unsigned long count = 2, count2, max = 612852475143;
 	int status;
 
-	while (count <= number / 2)
+	while (count <= number)
 	{
 		if (number % count == 0)
 		{
