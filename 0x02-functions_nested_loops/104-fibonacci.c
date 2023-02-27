@@ -20,7 +20,7 @@ int main(void)
 			prev = tmp;
 			count++;
 		}
-		else
+		if (count > 91)
 		{
 			if (status == 0)
 			{
