@@ -7,31 +7,32 @@
 int main(void)
 {
 	unsigned long now = 1, prev = 0, tmp;
-	int count = 0;
+	int count = 0, now1 = 0, now2 = 0, prev1 = 0, prev2 = 0;
 
 	while (count < 98)
 	{
-		tmp =  now;
-		now = now + prev;
-		if (count < 97)
+		if (now <= sizeof(unsinged long))
 		{
-			if (now <= 4294967295)
-				printf("%lu, ", now);
-			else
-			{
-				printf("%lu", now / 1000000000);
-				printf("%lu, ", now % 1000000000);
-			}
+			tmp =  now;
+			now = now + prev;
+			printf("%lu, ", now);
+			prev = tmp;
+			count++;
 		}
 		else
 		{
-			printf("%lu", now / 1000000000);
-			printf("%lu\n", now % 1000000000);
+			printf("%lu", now1 + (now2 / 1000000000));
+			if (count < 97)
+				printf("%lu, ", now2 % 1000000000);
+			else
+				printf("%lu\n", now2 % 1000000000);	
+			prev1 = prev / 1000000000;
+			prev2 = prev % 1000000000;
+			now1 = now / 1000000000;
+			now2 = now % 1000000000;
+			count++;
 		}
-		prev = tmp;
-		count++;
 	}
 
 	return (0);
 }
-
