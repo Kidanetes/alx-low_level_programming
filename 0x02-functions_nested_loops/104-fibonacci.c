@@ -14,9 +14,20 @@ int main(void)
 		tmp =  now;
 		now = now + prev;
 		if (count < 98)
-			printf("%lu, ", now);
+		{
+			if (now <= 4294967295)
+				printf("%lu, ", now);
+			else
+			{
+				printf("%lu", now / 1000000000);
+				printf("%lu, ", now % 1000000000);
+			}
+		}
 		else
-			printf("%lu\n", now);
+		{
+			printf("%lu", now / 1000000000);
+			printf("%lu\n", now % 1000000000);
+		}
 		prev = tmp;
 		count++;
 	}
