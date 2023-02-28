@@ -23,7 +23,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			res = res + *(n1 + _strlen(n1) - 1 - j) - '0';
 		else
 			res = res + *(n1 + _strlen(n1) - 1 - j) +  *(n2 + _strlen(n2) - 1 - j) - '0' - '0';
-		*(r + j) = res %  10;
+		*(r + j) = res %  10 + '0';
 		res = res / 10;
 		j++;
 	}
