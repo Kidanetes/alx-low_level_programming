@@ -9,21 +9,11 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, length1, length2;
+	int i = 0, j = 0;
 	int res = 0;
 	char tmp;
 
-	while (n1[i] != '\0')
-	{
-		i++;
-	}
-	length1 = i;
-	while (n2[j] != '\0')
-	{
-		j++;
-	}
-	length2 = j;
-	if (size_r < length1 && size_r < length2)
+	if (size_r < _strlen(n1) && size_r < _strlen(n2))
 	{
 		return (0);
 	}
@@ -32,14 +22,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j = 0;
 		while (n1[j] != '\0' || n2[j] != '\0')
 		{
-			if (n1[j] == '\0')
-			{
-				n1[j] = '0';
-			}
-			if (n2[j] == '\0')
-			{
-				n2[j] = '0';
-			}
 			res = res + n1[j] - '0' + n2[j] - '0';
 			r[j] = (res % 10) + '0';
 			res = res / 10;
@@ -65,4 +47,19 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[j] = tmp;
 	}	
 	return (r);
+}
+/**
+ * _strlen - returns the length of a string
+ * @s: input parameter
+ * Return: int
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; *(s + i) != '\0'; i++)
+	{
+	}
+
+	return (i);
 }
