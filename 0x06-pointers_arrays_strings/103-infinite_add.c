@@ -16,36 +16,22 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		return (0);
 	}
-	else
+	while (j < _strlen(n1) || j < _strleng(n2))
 	{
-		j = 0;
-		while (n1[j] != '\0' || n2[j] != '\0')
-		{
-			res = res + n1[j] - '0' + n2[j] - '0';
-			r[j] = (res % 10) + '0';
-			res = res / 10;
-			j++;
-		}
-		if (size_r - 1 < j)
-			return (0);
-		if (res != 0 && j < size_r)
-		{
-			r[j] = res + '0';
-		}
-	}
-	j = 0;
-	while (r[j] >= '0' && r[j] <= '9')
-	{
+		if (j >= _strlen(n1))
+			res = res + *(n2 + _strlen(n2) - 1 - j) - '0';
+		else if (j >= _strlen(n2))
+			res = res + *(n1 + _strlen(n1) - 1 - j) - '0';
+		else
+			res = res + *(n1 + _strlen(n1) - 1 - j) +  *(n2 + _strlen(n2) - 1 - j) - '0' - '0';
+		*(r + j) = res %  10;
+		res = res / 10;
 		j++;
 	}
-	j--;
-	for (i = 0; i <= j; i++, j--)
-	{
-		tmp = r[i];
-		r[i] = r[j];
-		r[j] = tmp;
-	}
-	return (r);
+	if (j == size_r - 1 && res == 1)
+		return (0);
+
+	return (rev_string(r));
 }
 /**
  * _strlen - returns the length of a string
@@ -62,3 +48,27 @@ int _strlen(char *s)
 
 	return (i);
 }
+/**
+ * rev_string - revrese a string
+ * @s: input parameter
+ * Return: void
+ */
+void rev_string(char *s)
+{
+	int i, j;
+	int tmp;
+	int length;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+	}
+	length = i;
+
+	for (i = 0, j = length - 1; i <= j ; i++, j--)
+	{
+		tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
+	}
+}
+
