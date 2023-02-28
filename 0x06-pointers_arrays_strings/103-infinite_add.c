@@ -9,8 +9,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0;
-	int res = 0;
+	int i = 0, j = 0, res = 0;
 	char tmp;
 
 	if (size_r < _strlen(n1) && size_r < _strlen(n2))
