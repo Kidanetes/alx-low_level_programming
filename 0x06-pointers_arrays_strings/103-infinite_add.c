@@ -27,10 +27,11 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		res = res / 10;
 		j++;
 	}
-	if (j > size_r - 1)
+	if (j > size_r - 1 ||(j == size_r - 1 && res == 1))
 		return (0);
 	if (res == 1)
 		*(r + j) = res + '0';
+	*(r + j + 1) == '\0';
 	rev_string(r);
 
 	return (r);
