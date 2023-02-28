@@ -27,7 +27,7 @@ void print_buffer(char *b, int size)
 					printf(" ");
 				else
 					printf("%02x", tmp);
-				if (j % 2 != 0 && j != 0)
+				if (j % 2 != 0)
 					printf(" ");
 			}
 			for (j = 0; j < 10 ; j++)
@@ -40,9 +40,6 @@ void print_buffer(char *b, int size)
 				else
 					printf(".");
 			}
-			if (i >= size)
-			continue;
-
 			printf("\n");
 		}
 	}
