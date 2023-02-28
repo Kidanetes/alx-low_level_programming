@@ -19,14 +19,14 @@ void print_buffer(char *b, int size)
 	{
 		for (; i < size; i = i + 10)
 		{
-			printf("%08x:", i);
+			printf("%08x: ", i);
 			for (j = 0; j < 10; j++)
 			{
 				if (i + j >= size)
 					printf(" ");
 				else
 					printf("%02x", *(b + i + j));
-				if (j % 2 == 0)
+				if (j % 2 != 0)
 					printf(" ");
 			}
 			for (j = 0; j < 10 ; j++)
