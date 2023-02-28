@@ -22,14 +22,13 @@ void print_buffer(char *b, int size)
 			printf("%08x: ", i);
 			for (j = 0; j < 10; j++)
 			{
-				if (j % 2 != 0)
-					printf(" ");
 				tmp = *(b + i + j);
 				if ((i + j) >= size)
 					printf("  ");
 				else
 					printf("%02x", tmp);
-				
+				if (j % 2 != 0)
+					printf(" ");
 			}
 			for (j = 0; j < 10 ; j++)
 			{
