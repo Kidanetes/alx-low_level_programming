@@ -9,8 +9,7 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, res = 0;
-	char tmp;
+	int j = 0, res = 0;
 
 	if (size_r < _strlen(n1) && size_r < _strlen(n2))
 	{
@@ -30,8 +29,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (j == size_r - 1 && res == 1)
 		return (0);
+	rev_string(r);
 
-	return (rev_string(r));
+	return (r);
 }
 /**
  * _strlen - returns the length of a string
