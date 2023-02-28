@@ -35,7 +35,7 @@ void print_buffer(char *b, int size)
 				tmp = *(b + i + j);
 				if (i + j >= size)
 					break;
-				else if (tmp >= 31 && tmp <= 126)
+				else if (tmp >= 32 && tmp <= 126)
 					printf("%c", tmp);
 				else
 					printf(".");
