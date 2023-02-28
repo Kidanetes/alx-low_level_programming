@@ -29,6 +29,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	if (j == size_r - 1 && res == 1)
 		return (0);
+	*(r + j) = res + '0';
 	rev_string(r);
 
 	return (r);
