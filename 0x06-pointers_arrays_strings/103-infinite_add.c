@@ -15,7 +15,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		return (0);
 	}
-	while (j < _strlen(n1) || j < _strleng(n2))
+	while (j < _strlen(n1) || j < _strlen(n2))
 	{
 		if (j >= _strlen(n1))
 			res = res + *(n2 + _strlen(n2) - 1 - j) - '0';
