@@ -1,4 +1,5 @@
 #include "main.h"
+int __attribute__ ((unused)) argc;
 /**
  * main - Entry point
  * @argc: input parameter
