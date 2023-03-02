@@ -6,11 +6,8 @@
  * @argv: input parameter
  * Return: int
  */
-int main(int argc, char *argv[])
+int main(int argc, char __attribute__ ((unused)) *argv[])
 {
-	if (argv[0] != NULL)
-	{
-		printf("%d\n", (argc - 1));
-	}
+	printf("%d\n", (argc - 1));
 	return (0);
 }
