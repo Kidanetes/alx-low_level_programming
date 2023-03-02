@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 int __attribute__ ((unused)) argc;
 /**
  * main - Entry point
