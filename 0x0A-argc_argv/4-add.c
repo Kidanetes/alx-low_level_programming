@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int  i = 1,sum = 0;
-	char **tmp1 = argv,* tmp;
+	int  i = 1, sum = 0;
+	char **tmp1 = argv, *tmp;
 
 	if (argc == 1)
 		printf("0\n");
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 		while (i < argc)
 		{
 			tmp = *argv;
-			while( *tmp  != '\0')
+			while (*tmp  != '\0')
 			{
 				if (*tmp < '0' || *tmp  > '9')
 				{
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 				}
 				tmp = tmp + 1;
 			}
-			if( i != argc - 1)
+			if (i != argc - 1)
 				argv += 1;
 			i++;
 		}
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 				argv++;
 			i++;
 		}
-		printf("%d\n",sum);
+		printf("%d\n", sum);
 	}
 	return (0);
 }
