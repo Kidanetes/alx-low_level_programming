@@ -14,58 +14,35 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 		printf("0\n");
-        else
-        {
-                argv++;
-                while (i < argc)
-                {
-                        tmp = *argv;
-                        while( *tmp  != '\0')
-                        {
-                                if (*tmp < '0' || *tmp  > '9')
-                                {
-                                        printf("Error\n");
-                                        return (1);
-                                }
-                        tmp = tmp + 1;
-
-                        }
-                        if( i != argc - 1)
-                                argv += 1;
-                        i++;
-
-                }
-                i = 1;
-                argv = tmp1;
-                argv++;
-                while (i < argc)
-                {
-                        sum = sum + atoi(*argv);
-                        if (i != argc - 1)
-                                argv++;
-                        i++;
-                }
-                printf("%d\n",sum);
-        }
-        return (0);
-	
-	/*int i = 1, j = 0, sum = 0;*/
-
-	/*while (i < argc)
+	else
 	{
-		j = 0;
-		for (j = 0; argv[i][j] != '\0'; j++)
+		argv++;
+		while (i < argc)
 		{
-			if (!(argv[i][j] >= '0' && argv[i][j] <= '9'))
+			tmp = *argv;
+			while( *tmp  != '\0')
 			{
-				printf("%s\n", "Error");
-				return (1);
+				if (*tmp < '0' || *tmp  > '9')
+				{
+					printf("Error\n");
+					return (1);
+				}
+				tmp = tmp + 1;
 			}
+			if( i != argc - 1)
+				argv += 1;
+			i++;
 		}
-		sum = sum + atoi(argv[i]);
-		i++;
+		i = 1;
+		argv = tmp1 + 1;
+		while (i < argc)
+		{
+			sum = sum + atoi(*argv);
+			if (i != argc - 1)
+				argv++;
+			i++;
+		}
+		printf("%d\n",sum);
 	}
-	printf("%d\n", sum);
-	return (0);*/
-	
+	return (0);
 }
