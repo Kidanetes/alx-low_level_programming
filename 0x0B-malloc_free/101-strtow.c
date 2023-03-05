@@ -16,8 +16,9 @@ char **strtow(char *str)
 		if (str[i] == ' ')
 		{
 			x++;
-			while( str[i] == ' ')
+			while (str[i] == ' ')
 				i++;
+		}
 	}
 	x++;
 	strtow = malloc(x);
