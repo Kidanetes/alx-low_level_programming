@@ -61,6 +61,5 @@ char **strtow(char *str)
 			str++;
 		i++;
 	}
-	strtow[i] = NULL;
 	return (strtow);
 }
