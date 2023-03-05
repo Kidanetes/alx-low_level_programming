@@ -11,7 +11,7 @@ char **strtow(char *str)
 	int x = 1, i, j, k, length;
 	char **strtow;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == "")
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
