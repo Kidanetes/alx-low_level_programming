@@ -15,11 +15,9 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ')
+		if (str[i] == ' ' && str[i - 1] != ' ')
 		{
 			x++;
-			while (str[i + 1] == ' ')
-				i++;
 		}
 	}
 	x++;
@@ -38,14 +36,13 @@ char **strtow(char *str)
 		if (length != 0)
 		{
 			strtow[i] = malloc(length + 1);
-			i++;
-		}
-		if (strtow[i] == NULL)
-		{
-			for (; i >= 0; i--)
-				free(strtow[i]);
-			free(strtow);
-			return (NULL);
+			if (strtow[i] == NULL)
+			{
+				for (; i >= 0; i--)
+					free(strtow[i]);
+				free(strtow);
+				return (NULL);
+			}
 		}
 		j++;
 	}
