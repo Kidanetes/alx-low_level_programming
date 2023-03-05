@@ -25,7 +25,8 @@ char **strtow(char *str)
 	if (strtow == NULL)
 		return (NULL);
 	j = 0;
-	for (i = 0; i < x; i++)
+	i = 0;
+	while (i < x)
 	{
 		length = 0;
 		while (str[j]  != ' ' && str[j] != '\0')
@@ -43,6 +44,7 @@ char **strtow(char *str)
 				free(strtow);
 				return (NULL);
 			}
+			i++;
 		}
 		j++;
 	}
