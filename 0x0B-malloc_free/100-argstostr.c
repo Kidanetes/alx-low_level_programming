@@ -16,7 +16,10 @@ char *argstostr(int ac, char **av)
 	for (; i < ac; i++)
 	{
 		while (*av[i] != '\0')
+		{
 			size++;
+			av[i]++;
+		}
 		size++;
 	}
 	size++;
