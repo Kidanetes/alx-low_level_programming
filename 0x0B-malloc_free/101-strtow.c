@@ -24,7 +24,7 @@ char **strtow(char *str)
 	for (i = 0; i < x; i++)
 	{
 		length = 0;
-		while (s[j]  != ' ' && s[j] != '\0')
+		while (str[j]  != ' ' && str[j] != '\0')
 		{
 			length++;
 		}
