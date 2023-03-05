@@ -36,6 +36,7 @@ char **strtow(char *str)
 				length++;
 				j++;
 			}
+			j++;
 		}
 		if (length != 0)
 		{
