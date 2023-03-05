@@ -11,13 +11,15 @@ char **strtow(char *str)
 	int x = 1, i, j, k, length;
 	char **strtow;
 
+	if (str == NULL || str = "")
+		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
 		{
 			x++;
 			while (str[i] == ' ')
-				i++;
+				continue;
 		}
 	}
 	x++;
@@ -40,7 +42,7 @@ char **strtow(char *str)
 		}
 		if (strtow[i] == NULL)
 		{
-			for (i--; i >= 0; i--)
+			for (; i >= 0; i--)
 				free(strtow[i]);
 			free(strtow);
 			return (NULL);
