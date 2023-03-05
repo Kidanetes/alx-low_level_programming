@@ -32,10 +32,7 @@ char **strtow(char *str)
 		while (str[j]  != ' ' && str[j] != '\0')
 		{
 			if (str[j - 1] != ' ')
-			{
 				length++;
-				j++;
-			}
 			j++;
 		}
 		if (length != 0)
