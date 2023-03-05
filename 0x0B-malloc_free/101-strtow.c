@@ -18,8 +18,8 @@ char **strtow(char *str)
 		if (str[i] == ' ')
 		{
 			x++;
-			while (str[i] == ' ')
-				continue;
+			while (str[i + 1] == ' ')
+				i++;
 		}
 	}
 	x++;
