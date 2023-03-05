@@ -46,7 +46,7 @@ char **strtow(char *str)
 	for (i = 0; i < x; i++)
 	{
 		k = 0;
-		while (*s != ' ' && *s != '\0')
+		while (*str != ' ' && *str != '\0')
 		{
 			strtow[i][k] = *str;
 			str++;
