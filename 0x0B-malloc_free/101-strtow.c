@@ -52,10 +52,12 @@ char **strtow(char *str)
 			str++;
 			k++;
 		}
+		strtow[i][k] = '\0';
 		while (*str == ' ')
 			str++;
 		i++;
 	}
+	strtow[i] = NULL;
 	return (strtow);
 }
 	
