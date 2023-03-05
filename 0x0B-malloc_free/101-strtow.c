@@ -14,7 +14,10 @@ char **strtow(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
+		{
 			x++;
+			while( str[i] == ' ')
+				i++;
 	}
 	x++;
 	strtow = malloc(x);
@@ -61,7 +64,3 @@ char **strtow(char *str)
 	strtow[i] = NULL;
 	return (strtow);
 }
-	
-	
-	
- 
