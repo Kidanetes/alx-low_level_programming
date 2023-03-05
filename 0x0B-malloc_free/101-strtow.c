@@ -15,7 +15,7 @@ char **strtow(char *str)
 		return (NULL);
 	for (i = 1; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' && str[i - 1] != ' ')
+		if (str[i] == ' ')
 		{
 			x++;
 		}
@@ -31,8 +31,7 @@ char **strtow(char *str)
 		length = 0;
 		while (str[j]  != ' ' && str[j] != '\0')
 		{
-			if (str[j - 1] != ' ')
-				length++;
+			length++;
 			j++;
 		}
 		if (length != 0)
