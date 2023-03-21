@@ -1,4 +1,3 @@
 #!/bin/bash
-gcc *.c -c -fPIC
-gcc *.o -shared -o -libdynamic.so
-
+gcc *.c -c -Wall -Werror -fPIC
+gcc *.o -shared -o liball.so
