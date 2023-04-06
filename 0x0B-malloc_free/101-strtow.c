@@ -20,7 +20,7 @@ char **strtow(char *str)
 	if (str[i] != ' ' && str[i] != '\0')
 		x = 1;
 	for (; str[i] != '\0'; i++)
-	{	
+	{
 		if (str[i] == ' ')
 		{
 			if (str[i + 1] == ' ' || str[i + 1] == '\0')
