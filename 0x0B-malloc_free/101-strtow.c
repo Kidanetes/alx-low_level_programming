@@ -10,7 +10,7 @@
  */
 char **strtow(char *str)
 {
-	int x = 0, i = 0, j, k, length;
+	int x = 0, i = 0;
 	char **strtow;
 
 	if (str == NULL || *str == '\0')
@@ -34,8 +34,18 @@ char **strtow(char *str)
 		strtow = NULL;
 	if (strtow == NULL)
 		return (NULL);
-	i = 0;
-	j = 0;
+	return (_strtow(strtow, str, x));
+}
+/**
+ * _strtow - split the string into words
+ * @strtow: parameter 1
+ * @str: parameter2
+ * @x: parameter 3
+ * Return: pointer to pointers of words
+ */
+char **_strtow(char **strtow, char *str, int x)
+{
+	int i = 0, j = 0, k, length
 	while (i < x)
 	{
 		length = 0;
