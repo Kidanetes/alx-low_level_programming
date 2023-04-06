@@ -45,7 +45,7 @@ char **strtow(char *str)
  */
 char **_strtow(char **strtow, char *str, int x)
 {
-	int i = 0, j = 0, k, length
+	int i = 0, j = 0, k, length;
 	while (i < x)
 	{
 		length = 0;
