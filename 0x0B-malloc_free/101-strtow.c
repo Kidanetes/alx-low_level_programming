@@ -29,7 +29,6 @@ char **strtow(char *str)
 			x++;
 		}
 	}
-	printf("x = %d", x);
 	strtow = malloc((x + 1) * sizeof(char *));
 	if (strtow == NULL)
 		return (NULL);
