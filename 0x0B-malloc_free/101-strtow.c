@@ -31,7 +31,7 @@ char **strtow(char *str)
 	}
 	strtow = malloc((x + 1) * sizeof(char *));
 	if (x == 0)
-		strtow == NULL;
+		strtow = NULL;
 	if (strtow == NULL)
 		return (NULL);
 	i = 0;
