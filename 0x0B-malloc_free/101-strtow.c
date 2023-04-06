@@ -20,8 +20,7 @@ char **strtow(char *str)
 	if (str[i] != ' ' && str[i] != '\0')
 		x = 1;
 	for (; str[i] != '\0'; i++)
-	{
-		
+	{	
 		if (str[i] == ' ')
 		{
 			if (str[i + 1] == ' ' || str[i + 1] == '\0')
@@ -46,11 +45,12 @@ char **strtow(char *str)
 char **_strtow(char **strtow, char *str, int x)
 {
 	int i = 0, j = 0, k, length;
+
 	while (i < x)
 	{
 		length = 0;
 		while (str[j] == ' ')
-                	j++;
+			j++;
 		k = j;
 		while (str[k] != ' ' && str[k] != '\0')
 		{
