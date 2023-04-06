@@ -13,7 +13,7 @@ char **strtow(char *str)
 	int x = 0, i = 0, j, k, length;
 	char **strtow;
 
-	if (str == NULL || *str == '\0' || strcmp(str, " ") == 0)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	while (str[i] == ' ')
 		i++;
@@ -30,6 +30,8 @@ char **strtow(char *str)
 		}
 	}
 	strtow = malloc((x + 1) * sizeof(char *));
+	if (x == 0)
+		strtow == NULL;
 	if (strtow == NULL)
 		return (NULL);
 	i = 0;
