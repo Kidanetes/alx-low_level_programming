@@ -9,14 +9,15 @@
  */
 char **strtow(char *str)
 {
-	int x = 1, i = 0, j, k, length;
+	int x = 0, i = 0, j, k, length;
 	char **strtow;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' ||)
 		return (NULL);
 	while (str[i] == ' ')
 		i++;
-
+	if (str[i] != ' ' && str[i] != '\0')
+		x = 1;
 	for (; str[i] != '\0'; i++)
 	{
 		
