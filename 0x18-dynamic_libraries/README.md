@@ -1,2 +1,0 @@
-#C PROJECT
-dynamic libraries
