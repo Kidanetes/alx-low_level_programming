@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(ptr);
 		return (0);
 	}
-	ptr[i] = '\0';
+	ptr[j] = '\0';
 	k = write(STDOUT_FILENO, ptr, j);
 	if (k == -1)
 	{
@@ -34,4 +34,3 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(ptr);
 	return (j);
 }
-	
