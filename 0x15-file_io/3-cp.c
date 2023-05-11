@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	j = open(argv[2], O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
-	while ((k = read(i, ptr, 1024)) > 0)
+	while ((k = read(i, ptr, 1024) > 0)
 	{
 		if (k != write(j, ptr, k) || j == -1)
 		{
