@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, k, l;
+	int i, j, k;
 	char ptr[1024];
 
 	if (argc != 3)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	j = open(argv[2], O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
 	while ((k = read(i, ptr, 1024)) > 0)
 	{
-		if (l != write(j, ptr, k) || j == -1)
+		if (k != write(j, ptr, k) || j == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(i);
