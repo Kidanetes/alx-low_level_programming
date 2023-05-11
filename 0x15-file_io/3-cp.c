@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, k;
+	int i, j, k, l;
 	char ptr[1024];
 
 	if (argc != 3)
