@@ -1,51 +1,58 @@
 #include "main.h"
 /**
- * main - copies the content of a file to another file
- * @argc: number of arguments passed to the program
- * @argv: array of arguments
+ * main - entry point
+ * @argc: number of arguments
+ * @argv: arguments
  *
- * Return: Always 0 (Success)
+ * Return: 0(success)
  */
 int main(int argc, char *argv[])
 {
-	int fd_r, fd_w, x, m, n;
-	char buf[BUFSIZ];
+	int i, j, k, l;
+	char ptr[1024];
 
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd_r = open(argv[1], O_RDONLY);
-	if (fd_r < 0)
+	i = open(argv[1], O_RDONLY);
+	if (i == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fd_w = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((x = read(fd_r, buf, BUFSIZ)) > 0)
+	j = open(argv[2], O_WRONLY | O_APPEND | O_TRUNC, 0664);
+	if (j == -1)
 	{
-		if (fd_w < 0 || write(fd_w, buf, x) != x)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	k = read(i, ptr, 1024);
+	while (k > 0)
+	{
+		l = write(j, ptr, k);
+		if (k != l)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(fd_r);
 			exit(99);
 		}
+		k = read(i, ptr, 1024);
 	}
-	if (x < 0)
+	if (k == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+                exit(99);
 	}
-	m = close(fd_r);
-	n = close(fd_w);
-	if (m < 0 || n < 0)
+	if (close(i) == -1)
 	{
-		if (m < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_r);
-		if (n < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
+		dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", i);
 		exit(100);
 	}
+	if (close(j) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", j);
+                exit(100);
+	}
 	return (0);
-}
+}	
