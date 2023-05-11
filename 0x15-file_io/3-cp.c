@@ -44,16 +44,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	if (close(i) == -1)
+	k = close(i);
+	l = close(j);
+	if (k  == -1 || l == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", i);
-		close(j);
+		if (k == -1)
+			dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", i);
+		if (l == -1)
+			dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", j);
 		exit(100);
-	}
-	if (close(j) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", j);
-                exit(100);
 	}
 	return (0);
 }	
