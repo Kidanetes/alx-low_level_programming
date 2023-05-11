@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	if (i == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close(j);
 		exit(98);
 	}
 	j = open(argv[2], O_WRONLY | O_CREAT | O_APPEND | O_TRUNC, 0664);
