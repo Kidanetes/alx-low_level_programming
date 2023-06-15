@@ -42,10 +42,10 @@ int main(int argc, char *argv[])
 	if (k  == -1 || l == -1)
 	{
 		if (k == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", i);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
 		if (l == -1)
-			dprintf(STDERR_FILENO, "Error: Can't close %d FD_VALUE\n", j);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", j);
 		exit(100);
 	}
 	return (0);
-}	
+}
