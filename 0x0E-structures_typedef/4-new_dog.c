@@ -9,7 +9,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+	/*dog_t *new_dog;
 	char *cpyname, *cpyowner;
 	int i = 0, j = 0,  k;
 
@@ -44,6 +44,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	(*new_dog).name = cpyname;
 	(*new_dog).age = age;
 	(*new_dog).owner = cpyowner;
-	return (new_dog);
+	return (new_dog);*/
+	        dog_t *new;
+
+        new = malloc(sizeof(dog_t));
+        if (new == NULL)
+                return (NULL);
+        new->name = name;
+        new->age = age;
+        new->owner = owner;
+
+        return (new);
+	
 }
 
