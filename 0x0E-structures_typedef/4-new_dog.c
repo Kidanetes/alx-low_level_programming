@@ -9,52 +9,58 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	/*dog_t *new_dog;
-	char *cpyname, *cpyowner;
-	int i = 0, j = 0,  k;
+	dog_t *new_dog;
+	char *name1, *owner1;
 
-	if (name == NULL || owner == NULL)
-		return (NULL);
-	while (name[i])
-		i++;
-	while (owner[j])
-		j++;
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 		return (NULL);
-	cpyname = malloc((i + 1));
-	if (cpyname == NULL)
+	if (name == NULL || owner == NULL)
 	{
 		free(new_dog);
 		return (NULL);
 	}
-	for (k = 0; name[k]; k++)
-		cpyname[k] = name[k];
-	cpyname[k] = '\0';
-	cpyowner = malloc((j + 1));
-	if (cpyowner == NULL)
+	name1 = copy(name);
+	if (name1 == NULL)
 	{
-		free((*new_dog).name);
 		free(new_dog);
 		return (NULL);
 	}
-	for (k = 0; owner[k]; k++)
-		cpyowner[k] = owner[k];
-	cpyowner[k] = '\0';
-	(*new_dog).name = cpyname;
-	(*new_dog).age = age;
-	(*new_dog).owner = cpyowner;
-	return (new_dog);*/
-	        dog_t *new;
-
-        new = malloc(sizeof(dog_t));
-        if (new == NULL)
+	owner1 = copy(owner);
+	if (owner1 == NULL)
+	{
+		free(new_dog);
+		free(name1);
                 return (NULL);
-        new->name = name;
-        new->age = age;
-        new->owner = owner;
-
+        }
+        new_dog->name = name;
+        new_dog->age = age;
+        new_dog->owner = owner;
         return (new);
 	
 }
+/**
+ * copy - copy one string into another
+ * @name: string to be copied
+ *
+ * Return: pointer to another string
+ */
+char *copy(char *name)
+{
+	int i = 0;
+	char *name1;
 
+	while (name[i] != '\0')
+		i++;
+	name1 = malloc(sizeof(char) * (i + 1));
+	if (name1 == NULL)
+		return (NULL);
+	i = 0;
+	while (name[i] != '\0')
+	{
+		name1[i] = name[i];
+		i++;
+	}
+	name1[i] = name[i];
+	return (name1);
+}
