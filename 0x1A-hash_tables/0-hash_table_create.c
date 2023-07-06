@@ -9,13 +9,14 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int i;
+	/*unsigned long int i;*/
 	hash_table_t *ptr;
+
+	if (size == 0)
+                return (NULL);
 
 	ptr = (hash_table_t *)malloc(sizeof(hash_table_t));
 	if (ptr == NULL)
-		return (NULL);
-	if (size == 0)
 		return (NULL);
 	ptr->size = size;
 	ptr->array = malloc(size * sizeof(hash_table_t *));
@@ -24,7 +25,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		free(ptr);
 		return (NULL);
 	}
-	for (i = 0; i < size; i++)
+	/*for (i = 0; i < size; i++)
 	{
 		ptr->array[i] = malloc(sizeof(hash_table_t *));
 		if (ptr->array[i] == NULL)
@@ -35,6 +36,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 			free(ptr);
 			return (NULL);
 		}
-	}
+	}*/
 	return (ptr);
 }
