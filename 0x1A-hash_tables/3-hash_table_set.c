@@ -25,13 +25,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	tmp = ht->array[index];
 	if (tmp == NULL)
 	{
-		tmp = ptr;
+		ptr = tmp;
 		ptr->next = NULL;
 	}
 	else
 	{
 		ptr->next = tmp;
-		tmp  = ptr;
+		ptr = tmp;
 	}
 	return (1);
 }
