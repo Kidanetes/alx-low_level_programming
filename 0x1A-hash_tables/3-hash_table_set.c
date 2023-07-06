@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		ptr->next = tmp->next;
+		ptr->next = tmp;
 		tmp  = ptr;
 	}
 	return (1);
