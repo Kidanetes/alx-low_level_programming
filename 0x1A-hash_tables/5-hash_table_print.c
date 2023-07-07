@@ -12,18 +12,21 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *ptr;
 	int status = 0;
 
-	printf("{");
-	for (i = 0; i < ht->size; i++)
+	if (ht != NULL)
 	{
-		ptr = ht->array[i];
-		while (ptr != NULL)
+		printf("{");
+		for (i = 0; i < ht->size; i++)
 		{
-			if (status == 1)
-				printf(", ");
-			printf("'%s': '%s'", ptr->key, ptr->value);
-			status = 1;
-			ptr = ptr->next;
+			ptr = ht->array[i];
+			while (ptr != NULL)
+			{
+				if (status == 1)
+					printf(", ");
+				printf("'%s': '%s'", ptr->key, ptr->value);
+				status = 1;
+				ptr = ptr->next;
+			}
 		}
+		printf("}\n");
 	}
-	printf("}\n");
 }
