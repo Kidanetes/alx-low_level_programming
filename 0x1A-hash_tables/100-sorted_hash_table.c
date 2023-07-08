@@ -93,7 +93,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
  */
 void add_to_sorted(shash_table_t *ht, shash_node_t *ptr)
 {
-	shash_node_t *tmp  = ht->shead;
+	shash_node_t *tmp;
 
 	if (ht->shead == NULL)
 	{
@@ -119,12 +119,14 @@ void add_to_sorted(shash_table_t *ht, shash_node_t *ptr)
 	}
 	else
 	{
+		tmp  = ht->shead->snext;
 		while (tmp != NULL)
 		{
 			if (strcmp(tmp->key, ptr->key) > 0)
 			{
 				ptr->snext = tmp;
 				ptr->sprev = tmp->sprev;
+				tmp->sprev->snext = ptr;
 				tmp->sprev = ptr;
 				break;
 			}
