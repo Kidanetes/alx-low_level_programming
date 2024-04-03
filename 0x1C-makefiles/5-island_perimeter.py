@@ -10,7 +10,7 @@ def island_perimeter(grid):
     grid(list of list): contains the map of an
     island as a list
     """
-    perimeter = 0;
+    perimeter = 0
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == 1:
