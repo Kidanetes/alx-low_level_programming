@@ -19,6 +19,7 @@ int advanced_binary(int *array, size_t size, int value)
 /**
  * advanced_binary2 - search using binary search aligorithm
  * @array: array to be searched
+ * @size: size
  * @i: lower bound
  * @j: upper bound
  * @m: middle
@@ -29,9 +30,11 @@ int advanced_binary2(int *array, size_t size, size_t i, size_t j, size_t m, int 
 {
 	size_t n;
 
+	if ((int)j < 0 || i >= size)
+		return (-1);
 	printf("Searching in array: ");
-	for (n = i; n <= j; n++)
-	{
+	for (n = i; (int)n <= (int)j; n++)
+	{	
 		printf("%d", array[n]);
 		if (n < j)
 			printf(", ");
@@ -47,19 +50,9 @@ int advanced_binary2(int *array, size_t size, size_t i, size_t j, size_t m, int 
 	}
 	m = (i + j) / 2;
 	if (array[m] < value)
-	{
-		if (i < size - 1)
-			i = m + 1;
-		else
-			return (-1);
-	}
+		i = m + 1;
 	else if (array[m] > value)
-	{
-		if (j > 0)
-			j = m - 1;
-		else
-			return (-1);
-	}
+		j = m - 1;
 	else
 		j = m;
 	return (advanced_binary2(array,size, i, j, m, value));
