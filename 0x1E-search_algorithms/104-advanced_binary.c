@@ -14,7 +14,7 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 	m = (i + j) / 2;
-	return (advanced_binary2(array,size, i, j, m, value));
+	return (advanced_binary2(array, size, i, j, m, value));
 }
 /**
  * advanced_binary2 - search using binary search aligorithm
@@ -26,7 +26,8 @@ int advanced_binary(int *array, size_t size, int value)
  * @value: value to be searched
  * Return: index of the found value or -1
  */
-int advanced_binary2(int *array, size_t size, size_t i, size_t j, size_t m, int value)
+int advanced_binary2(int *array, size_t size,
+		     size_t i, size_t j, size_t m, int value)
 {
 	size_t n;
 
@@ -34,7 +35,7 @@ int advanced_binary2(int *array, size_t size, size_t i, size_t j, size_t m, int 
 		return (-1);
 	printf("Searching in array: ");
 	for (n = i; (int)n <= (int)j; n++)
-	{	
+	{
 		printf("%d", array[n]);
 		if (n < j)
 			printf(", ");
@@ -55,7 +56,7 @@ int advanced_binary2(int *array, size_t size, size_t i, size_t j, size_t m, int 
 		j = m - 1;
 	else
 		j = m;
-	return (advanced_binary2(array,size, i, j, m, value));
+	return (advanced_binary2(array, size, i, j, m, value));
 }
 
 
