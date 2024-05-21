@@ -47,8 +47,7 @@ int advanced_binary2(int *array, size_t size,
 	{
 		if (array[i] == value)
 			return (i);
-		else
-			return (-1);
+		return (-1);
 	}
 	if (array[m] < value)
 		i = m + 1;
