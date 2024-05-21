@@ -38,7 +38,7 @@ int advanced_binary2(int *array, size_t i, size_t j, size_t m, int value)
 		else
 			printf("\n");
 	}
-	if (i == j)
+	if (i == m)
 	{
 		if (array[i] == value)
 			return (i);
@@ -52,7 +52,7 @@ int advanced_binary2(int *array, size_t i, size_t j, size_t m, int value)
 		j = m - 1;
 	else
 		j = m;
-return (advanced_binary2(array, i, j, m, value));
+	return (advanced_binary2(array, i, j, m, value));
 }
 
 
