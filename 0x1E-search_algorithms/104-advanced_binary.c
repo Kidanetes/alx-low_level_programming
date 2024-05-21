@@ -13,6 +13,15 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
+	if (size == 2)
+	{
+		if (array[0] == value)
+			return (0);
+		else if (array[1] == value)
+			return (1);
+		else
+			return (-1);
+	}
 	m = (i + j) / 2;
 	return (advanced_binary2(array, i, j, m, value));
 }
@@ -38,7 +47,7 @@ int advanced_binary2(int *array, size_t i, size_t j, size_t m, int value)
 		else
 			printf("\n");
 	}
-	if (i == m || i == j)
+	if (i == j)
 	{
 		if (array[i] == value)
 			return (i);
