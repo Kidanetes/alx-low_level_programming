@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * binary_search - search using binary search aligorithm
+ * advanced_binary - search using binary search aligorithm
  * @array: array to be searched
  * @size: size f the array to be searched
  * @value: value to be searched
@@ -17,7 +17,7 @@ int advanced_binary(int *array, size_t size, int value)
 	return (advanced_binary2(array, i, j, m, value));
 }
 /**
- * binary_search - search using binary search aligorithm
+ * advanced_binary2 - search using binary search aligorithm
  * @array: array to be searched
  * @i: lower bound
  * @j: upper bound
