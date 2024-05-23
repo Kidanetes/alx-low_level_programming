@@ -13,7 +13,7 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	m = (i + j) / 2;
+	m = (i + j + 1) / 2;
 	return (advanced_binary2(array, size, i, j, m, value));
 }
 /**
