@@ -14,10 +14,7 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	if ((i + j) % 2 == 0)
-		m = (i + j) / 2;
-	else
-		m = (i + j) / 2 + 1;
+	m = (i + j) / 2;
 	return (advanced_binary2(array, size, i, j, m, value));
 }
 /**
@@ -36,10 +33,7 @@ int advanced_binary2(int *array, size_t size,
 	if ((int)j < 0 || i >= size)
 		return (-1);
 	print_subarray(array, i, j);
-	if ((i + j) % 2 == 0)
-		m = (i + j) / 2;
-	else
-		m = (i + j) / 2 + 1;
+	m = (i + j) / 2;
 	if (i == j)
 	{
 		if (array[i] == value)
@@ -49,15 +43,19 @@ int advanced_binary2(int *array, size_t size,
 	if (array[m] < value)
 		i = m + 1;
 	else if (array[m] > value)
-		j = m - 1;
+		j = m;
 	else
 	{
 		if (m > 0 && array[m - 1] == value)
-			j = m;
+		{
+			if (j == m)
+				j = m - 1;
+			else
+				j = m;
+		}
 		else
 		{
 			i = m;
-			print_subarray(array, i, j);
 			return (m);
 		}
 	}
@@ -72,13 +70,11 @@ int advanced_binary2(int *array, size_t size,
  */
 void print_subarray(int *array, size_t i, size_t j)
 {
-	size_t n;
-
 	printf("Searching in array: ");
-	for (n = i; (int)n <= (int)j; n++)
+	for (; (int)i <= (int)j; i++)
 	{
-		printf("%d", array[n]);
-		if (n < j)
+		printf("%d", array[i]);
+		if (i < j)
 			printf(", ");
 		else
 			printf("\n");
